@@ -8,7 +8,8 @@ public class DragObject : MonoBehaviour
 
     private GameObject obj; //the object we are touching
     private Color objcolor; //the color of the object we are touching
-
+    public GameObject handler;
+    public GameObject testDelete;
     public Grid grid; //the game grid layout
 
     // Start is called before the first frame update
@@ -34,10 +35,12 @@ public class DragObject : MonoBehaviour
                     RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
                     //Make a raycast onto where our finger is touching, relative to the Camera
 
+                    GameObject deleteButton = GameObject.Find("DeleteButton");
+                    
                     if (hitInfo) //we are touching something, don't know what
                     {
                         GameObject objcheck = hitInfo.transform.gameObject;
-
+                        Debug.Log(objcheck.name);
                         
 
                         if (objcheck.CompareTag("PlaceableObject"))  //We are touching an object that is meant to be moved
@@ -55,6 +58,12 @@ public class DragObject : MonoBehaviour
                             obj.GetComponent<BoxCollider2D>().enabled = false; //turn off the collider while we are moving the object
 
                         }
+                        if(objcheck.name == "DeleteButton"){
+                            Destroy(deleteButton.transform.parent.gameObject);
+                        }
+                    }
+                    if(deleteButton != null){
+                        Destroy(deleteButton);
                     }
                     break;
 
@@ -70,6 +79,10 @@ public class DragObject : MonoBehaviour
 
                     Vector3Int cellPosition = grid.WorldToCell(obj.transform.position);  //Get the position of the closest cell the object is in
                     obj.transform.position = grid.GetCellCenterWorld(cellPosition); //Place the object in the center of that cell
+                    Vector3 deletePosition = obj.transform.position + new Vector3(1,1,0);
+                    deleteButton = Instantiate(testDelete, deletePosition, Quaternion.identity, obj.transform);
+                    deleteButton.name = "DeleteButton";
+
                     obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
 
                     obj.GetComponent<BoxCollider2D>().enabled = true; //turn back on the box collider, as the object is placed now
