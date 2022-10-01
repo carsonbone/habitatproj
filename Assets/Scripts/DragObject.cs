@@ -10,6 +10,7 @@ public class DragObject : MonoBehaviour
     private Color objcolor; //the color of the object we are touching
     public GameObject handler;
     public GameObject testDelete;
+    public GameObject testRotate;
     public Grid grid; //the game grid layout
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class DragObject : MonoBehaviour
                     //Make a raycast onto where our finger is touching, relative to the Camera
 
                     GameObject deleteButton = GameObject.Find("DeleteButton");
+                    GameObject rotateButton = GameObject.Find("RotateButton");
                     
                     if (hitInfo) //we are touching something, don't know what
                     {
@@ -61,9 +63,17 @@ public class DragObject : MonoBehaviour
                         if(objcheck.name == "DeleteButton"){
                             Destroy(deleteButton.transform.parent.gameObject);
                         }
+                        if(objcheck.name == "RotateButton"){
+                            Vector3 rotation = new Vector3(0, 0, -90);
+                            Vector3 inverseRotation = new Vector3(0, 0, 90);
+                            deleteButton.transform.parent.transform.Rotate(rotation);
+                        }
                     }
                     if(deleteButton != null){
                         Destroy(deleteButton);
+                    }
+                    if(rotateButton != null){
+                        Destroy(rotateButton);
                     }
                     break;
 
@@ -79,9 +89,12 @@ public class DragObject : MonoBehaviour
 
                     Vector3Int cellPosition = grid.WorldToCell(obj.transform.position);  //Get the position of the closest cell the object is in
                     obj.transform.position = grid.GetCellCenterWorld(cellPosition); //Place the object in the center of that cell
-                    Vector3 deletePosition = obj.transform.position + new Vector3(1,1,0);
+                    Vector3 deletePosition = obj.transform.position + new Vector3(1f,1f,0f);
                     deleteButton = Instantiate(testDelete, deletePosition, Quaternion.identity, obj.transform);
                     deleteButton.name = "DeleteButton";
+                    Vector3 rotatePosition = obj.transform.position + new Vector3(-1f,1.1f,0f);
+                    rotateButton = Instantiate(testRotate, rotatePosition, Quaternion.identity, obj.transform);
+                    rotateButton.name = "RotateButton";
 
                     obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
 

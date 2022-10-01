@@ -3023,6 +3023,8 @@ MonoBehaviour:
   handler: {fileID: 0}
   testDelete: {fileID: 3260908147147847194, guid: deda7aa4b6e51494cb0f1f4aabcc2e0d,
     type: 3}
+  testRotate: {fileID: 3316681137364651080, guid: d01fe79c1ff014e4d8d025abe1341b7d,
+    type: 3}
   grid: {fileID: 2058734579}
 --- !u!1 &423670732
 GameObject:
