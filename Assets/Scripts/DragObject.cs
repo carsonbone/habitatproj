@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DragObject : MonoBehaviour
 {
@@ -13,10 +14,18 @@ public class DragObject : MonoBehaviour
     public GameObject testRotate;
     public Grid grid; //the game grid layout
 
+
+
+    //stuff for spawning objects
+    private GameObject spawnedObj;
+    private bool JustSpawned;
+    private UIObject uiscript;
+
     // Start is called before the first frame update
+   
     void Start()
     {
-        
+        JustSpawned = false;
     }
 
     // Update is called once per frame
@@ -33,22 +42,61 @@ public class DragObject : MonoBehaviour
             {
                 case TouchPhase.Began: //The touch started
 
+
+                    PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+                    eventDataCurrentPosition.position = new Vector2(touch.position.x, touch.position.y);
+                    List<RaycastResult> results = new List<RaycastResult>();
+                    EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
+                    if(results.Count > 0)
+                    {
+                        if (results[0].gameObject.CompareTag("UIButton"))
+                        {
+                            Debug.Log("touching UI button");
+                            results[0].gameObject.GetComponent<UIButtons>().FlipEnable();
+                        }
+                        if (results[0].gameObject.CompareTag("ObjectUI"))
+                        {
+                            Debug.Log("touch ui OBJECT"); //we are hitting a placeableobject in the ui
+                            Debug.Log(results[0].gameObject.name);
+                            GameObject tempobj = GameObject.Find(results[0].gameObject.name);
+                            uiscript = tempobj.GetComponent<UIObject>();
+                            spawnedObj = uiscript.GiveObj();
+                            JustSpawned = true;
+                            obj = spawnedObj;
+                            
+                        }
+                    }
+
+
                     RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
                     //Make a raycast onto where our finger is touching, relative to the Camera
 
                     GameObject deleteButton = GameObject.Find("DeleteButton");
                     GameObject rotateButton = GameObject.Find("RotateButton");
+                    ///running finds every frame can be bad for performance
                     
-                    if (hitInfo) //we are touching something, don't know what
-                    {
-                        GameObject objcheck = hitInfo.transform.gameObject;
-                        Debug.Log(objcheck.name);
-                        
+                    if (hitInfo || JustSpawned ) //we are touching something, don't know what
+                        //OR, we just spawned an object with this touch
 
+                    {
+                        GameObject objcheck = null;
+                        if(!JustSpawned)//if this object already existed
+                        {
+
+                            objcheck = hitInfo.transform.gameObject;
+                        }
+                        else
+                        {
+                            objcheck = obj;
+                        }
+
+                        Debug.Log(objcheck.name);
                         if (objcheck.CompareTag("PlaceableObject"))  //We are touching an object that is meant to be moved
                             //ie, not a player or ground tile
                         {
-                            obj = hitInfo.transform.gameObject; //Now, set this variable to the GameObject we are touching
+                            if (!JustSpawned) { obj = hitInfo.transform.gameObject; } //Now, set this variable to the GameObject we are touching
+                            JustSpawned = false; //the object now exists, we dont need this bool anymore
                             Debug.Log(obj.name);
                             Debug.Log("obj found");
                             objcolor = obj.GetComponent<SpriteRenderer>().material.color;  //change the color of the object
@@ -106,7 +154,7 @@ public class DragObject : MonoBehaviour
                     //////////////
                     /////
                     ///
-                    //Evantually this is where we will update the new position of the object into whatever 
+                    //Eventually this is where we will update the new position of the object into whatever 
                     //array or file we use to save
                     //object positions
                     //
