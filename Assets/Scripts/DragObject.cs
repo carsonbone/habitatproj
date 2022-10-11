@@ -137,11 +137,17 @@ public class DragObject : MonoBehaviour
 
                     Vector3Int cellPosition = grid.WorldToCell(obj.transform.position);  //Get the position of the closest cell the object is in
                     obj.transform.position = grid.GetCellCenterWorld(cellPosition); //Place the object in the center of that cell
-                    Vector3 deletePosition = obj.transform.position + new Vector3(1f,1f,0f);
+                    Renderer rend = obj.GetComponent<Renderer>();
+
+                    Vector3 deletePosition = rend.bounds.max;
                     deleteButton = Instantiate(testDelete, deletePosition, Quaternion.identity, obj.transform);
                     deleteButton.name = "DeleteButton";
-                    Vector3 rotatePosition = obj.transform.position + new Vector3(-1f,1.1f,0f);
+                    var trueScale = new Vector3(0.0463154f / obj.transform.lossyScale.x, 0.04247932f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
+                    deleteButton.transform.localScale = trueScale;
+                    Vector3 rotatePosition = new Vector3(rend.bounds.min.x, rend.bounds.max.y, rend.bounds.max.z);
                     rotateButton = Instantiate(testRotate, rotatePosition, Quaternion.identity, obj.transform);
+                    trueScale = new Vector3(0.334176f / obj.transform.lossyScale.x, 0.3087065f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
+                    rotateButton.transform.localScale = trueScale;
                     rotateButton.name = "RotateButton";
 
                     obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
