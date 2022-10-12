@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragObject : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class DragObject : MonoBehaviour
 
 
     //stuff for spawning objects
-    private GameObject spawnedObj;
+    private GameObject tempObj; //the object in the scroll view
+    private GameObject spawnedObj; //the new prefab that's been spawned
     private bool JustSpawned;
     private UIObject uiscript;
 
@@ -57,13 +59,31 @@ public class DragObject : MonoBehaviour
                         }
                         if (results[0].gameObject.CompareTag("ObjectUI"))
                         {
-                            Debug.Log("touch ui OBJECT"); //we are hitting a placeableobject in the ui
-                            Debug.Log(results[0].gameObject.name);
-                            GameObject tempobj = GameObject.Find(results[0].gameObject.name);
-                            uiscript = tempobj.GetComponent<UIObject>();
-                            spawnedObj = uiscript.GiveObj();
-                            JustSpawned = true;
-                            obj = spawnedObj;
+                            bool deselect = false; //if we are trying to deselect the object, this will be true
+
+                            if (tempObj != null)
+                            {
+                                if (tempObj == GameObject.Find(results[0].gameObject.name))
+                                {
+                                    //we are choosing the same object again, so we probably want to deselect it
+                                    deselect = true;
+                                }
+
+                                uiscript = tempObj.GetComponent<UIObject>();
+                                tempObj.GetComponent<Image>().color = Color.white;
+                                tempObj = null;
+
+                            }
+
+                            if (!deselect) { 
+                                Debug.Log("touch ui OBJECT"); //we are hitting a placeableobject in the ui
+                                Debug.Log(results[0].gameObject.name);
+                                tempObj = GameObject.Find(results[0].gameObject.name);
+
+                                tempObj.GetComponent<Image>().color = Color.black;
+
+                                JustSpawned = true;
+                            }
                             
                         }
                     }
@@ -75,7 +95,18 @@ public class DragObject : MonoBehaviour
                     GameObject deleteButton = GameObject.Find("DeleteButton");
                     GameObject rotateButton = GameObject.Find("RotateButton");
                     ///running finds every frame can be bad for performance
-                    
+
+                    if (!hitInfo && JustSpawned && results.Count == 0)
+                    {
+                        //we are not touching anything, and we want to spawn our object
+                        Debug.Log("trying to spawn");
+                        uiscript = tempObj.GetComponent<UIObject>();
+                        spawnedObj = uiscript.GiveObj();
+                        obj = spawnedObj;
+                        tempObj.GetComponent<Image>().color = Color.white;
+                        tempObj = null;
+                        uiscript = null;
+                    }
                     if (hitInfo || JustSpawned ) //we are touching something, don't know what
                         //OR, we just spawned an object with this touch
 
@@ -135,27 +166,28 @@ public class DragObject : MonoBehaviour
 
                 case TouchPhase.Ended: //The touch has ended, ie the finger lifted off the phone
 
-                    Vector3Int cellPosition = grid.WorldToCell(obj.transform.position);  //Get the position of the closest cell the object is in
-                    obj.transform.position = grid.GetCellCenterWorld(cellPosition); //Place the object in the center of that cell
-                    Renderer rend = obj.GetComponent<Renderer>();
+                    
+                        Vector3Int cellPosition = grid.WorldToCell(obj.transform.position);  //Get the position of the closest cell the object is in
+                        obj.transform.position = grid.GetCellCenterWorld(cellPosition); //Place the object in the center of that cell
+                        Renderer rend = obj.GetComponent<Renderer>();
 
-                    Vector3 deletePosition = rend.bounds.max;
-                    deleteButton = Instantiate(testDelete, deletePosition, Quaternion.identity, obj.transform);
-                    deleteButton.name = "DeleteButton";
-                    var trueScale = new Vector3(0.0463154f / obj.transform.lossyScale.x, 0.04247932f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
-                    deleteButton.transform.localScale = trueScale;
-                    Vector3 rotatePosition = new Vector3(rend.bounds.min.x, rend.bounds.max.y, rend.bounds.max.z);
-                    rotateButton = Instantiate(testRotate, rotatePosition, Quaternion.identity, obj.transform);
-                    trueScale = new Vector3(0.334176f / obj.transform.lossyScale.x, 0.3087065f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
-                    rotateButton.transform.localScale = trueScale;
-                    rotateButton.name = "RotateButton";
+                        Vector3 deletePosition = rend.bounds.max;
+                        deleteButton = Instantiate(testDelete, deletePosition, Quaternion.identity, obj.transform);
+                        deleteButton.name = "DeleteButton";
+                        var trueScale = new Vector3(0.0463154f / obj.transform.lossyScale.x, 0.04247932f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
+                        deleteButton.transform.localScale = trueScale;
+                        Vector3 rotatePosition = new Vector3(rend.bounds.min.x, rend.bounds.max.y, rend.bounds.max.z);
+                        rotateButton = Instantiate(testRotate, rotatePosition, Quaternion.identity, obj.transform);
+                        trueScale = new Vector3(0.334176f / obj.transform.lossyScale.x, 0.3087065f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
+                        rotateButton.transform.localScale = trueScale;
+                        rotateButton.name = "RotateButton";
 
-                    obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
+                        obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
 
-                    obj.GetComponent<BoxCollider2D>().enabled = true; //turn back on the box collider, as the object is placed now
+                        obj.GetComponent<BoxCollider2D>().enabled = true; //turn back on the box collider, as the object is placed now
 
-                    obj = null; //clear the obj variable, so it can be set to a new object on the next touch
-
+                        obj = null; //clear the obj variable, so it can be set to a new object on the next touch
+                    
 
                     //////////////
                     /////
