@@ -23,11 +23,14 @@ public class DragObject : MonoBehaviour
     private bool JustSpawned;
     private UIObject uiscript;
 
+
+    private bool validCheck;
     // Start is called before the first frame update
    
     void Start()
     {
         JustSpawned = false;
+        validCheck = true;
     }
 
     // Update is called once per frame
@@ -67,6 +70,7 @@ public class DragObject : MonoBehaviour
                                 {
                                     //we are choosing the same object again, so we probably want to deselect it
                                     deselect = true;
+                                    JustSpawned = false;
                                 }
 
                                 uiscript = tempObj.GetComponent<UIObject>();
@@ -107,22 +111,36 @@ public class DragObject : MonoBehaviour
                         tempObj = null;
                         uiscript = null;
                     }
+
                     if (hitInfo || JustSpawned ) //we are touching something, don't know what
                         //OR, we just spawned an object with this touch
 
                     {
                         GameObject objcheck = null;
-                        if(!JustSpawned)//if this object already existed
-                        {
 
-                            objcheck = hitInfo.transform.gameObject;
-                        }
-                        else
-                        {
-                            objcheck = obj;
-                        }
+                        
+
+
+                        if (!JustSpawned)//if this object already existed
+                            {
+
+                                objcheck = hitInfo.transform.gameObject;
+                            }
+
+                            if (JustSpawned == true)
+                            {
+                                objcheck = obj;
+                            }
+
+                        
+
 
                         Debug.Log(objcheck.name);
+
+
+
+
+
                         if (objcheck.CompareTag("PlaceableObject"))  //We are touching an object that is meant to be moved
                             //ie, not a player or ground tile
                         {
@@ -130,13 +148,20 @@ public class DragObject : MonoBehaviour
                             JustSpawned = false; //the object now exists, we dont need this bool anymore
                             Debug.Log(obj.name);
                             Debug.Log("obj found");
-                            objcolor = obj.GetComponent<SpriteRenderer>().material.color;  //change the color of the object
+                            Color tempred = new Color(1f, 0, 0);
+                            if (obj.GetComponent<SpriteRenderer>().material.color != tempred)
+                            {
+                                objcolor = obj.GetComponent<SpriteRenderer>().material.color;  //change the color of the object
+                            }
+                            
 
                             obj.GetComponent<SpriteRenderer>().material.color = new Color(0, 150, 150); //just a temp color
                             //will evantually change this to a specific material, something that highlights the object and makes it
                             //slightly transparent instead of just changing the whole color
 
-                            obj.GetComponent<BoxCollider2D>().enabled = false; //turn off the collider while we are moving the object
+                            obj.GetComponent<BoxCollider2D>().isTrigger = true; //turn off the collider while we are moving the object
+                            //just kidding, actually now we just set this as a trigger, meaning it wont physically collide
+                            //but it still has the box to do checks on
 
                         }
                         if(objcheck.name == "DeleteButton"){
@@ -161,12 +186,35 @@ public class DragObject : MonoBehaviour
                     Vector3 touchedPos = Camera.main.ScreenToWorldPoint(touch.position); //basically the position of our finger
                     //instead of relative to the camera it makes it relative to the game world
 
-                    obj.transform.position = new Vector3(touchedPos.x,touchedPos.y,0);  //make the object we are touching follow our finger
+                   
+                       // Debug.Log(obj.GetComponent<ObjectInfo>().isValid);
+
+                        if(obj.GetComponent<ObjectInfo>().isValid == true)
+                        {
+                            obj.GetComponent<SpriteRenderer>().material.color = new Color(0, 150, 150);
+                        }
+                        if (obj.GetComponent<ObjectInfo>().isValid == false)
+                        {
+                            obj.GetComponent<SpriteRenderer>().material.color = new Color(1f, 0 , 0);
+                        }
+                        obj.transform.position = new Vector3(touchedPos.x, touchedPos.y, 0);  //make the object we are touching follow our finger
+                    
                     break;
 
                 case TouchPhase.Ended: //The touch has ended, ie the finger lifted off the phone
 
+                    // this is if the location is NOT valid
+
+                    if (obj.GetComponent<ObjectInfo>().isValid == false)
+                    {
+                        obj.GetComponent<SpriteRenderer>().material.color = new Color(1f, 0, 0);
+
+                    }
+
+
+                    else { 
                     
+                        // this is if the location is valid
                         Vector3Int cellPosition = grid.WorldToCell(obj.transform.position);  //Get the position of the closest cell the object is in
                         obj.transform.position = grid.GetCellCenterWorld(cellPosition); //Place the object in the center of that cell
                         Renderer rend = obj.GetComponent<Renderer>();
@@ -176,7 +224,7 @@ public class DragObject : MonoBehaviour
                         deleteButton.name = "DeleteButton";
                         var trueScale = new Vector3(0.0463154f / obj.transform.lossyScale.x, 0.04247932f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
                         deleteButton.transform.localScale = trueScale;
-                        Vector3 rotatePosition = new Vector3(rend.bounds.min.x, rend.bounds.max.y, rend.bounds.max.z);
+                        Vector3 rotatePosition = new Vector3(rend.bounds.min.x, rend.bounds.max.y, rend.bounds.max.z) + new Vector3(-0.1f, 0.1f,0f);
                         rotateButton = Instantiate(testRotate, rotatePosition, Quaternion.identity, obj.transform);
                         trueScale = new Vector3(0.334176f / obj.transform.lossyScale.x, 0.3087065f / obj.transform.lossyScale.y, 1 / obj.transform.lossyScale.z);
                         rotateButton.transform.localScale = trueScale;
@@ -184,10 +232,11 @@ public class DragObject : MonoBehaviour
 
                         obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
 
-                        obj.GetComponent<BoxCollider2D>().enabled = true; //turn back on the box collider, as the object is placed now
+                        obj.GetComponent<BoxCollider2D>().isTrigger = false; //turn back on the box collider, as the object is placed now
+                        //just kidding again, now we unset it as a trigger, so that it has actual collision
 
                         obj = null; //clear the obj variable, so it can be set to a new object on the next touch
-                    
+                    }
 
                     //////////////
                     /////
