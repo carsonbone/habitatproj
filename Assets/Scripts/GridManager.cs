@@ -8,7 +8,8 @@ public class GridManager : MonoBehaviour
 {
     public GameObject waterTilePrefab;
     public GameObject groundTilePrefab;
-    public Grid gridObject;
+    public GameObject groundGrid;
+    public GameObject waterGrid;
     public Sprite[] sprites;
     public int[,] grid;
     private int columns = 49;
@@ -44,11 +45,11 @@ public class GridManager : MonoBehaviour
     {
         SpriteRenderer sr = new SpriteRenderer();
         if(grid[x,y] > 0){
-            sr = Instantiate(groundTilePrefab, new Vector3(x+0.5f, y+0.5f), Quaternion.identity).GetComponent<SpriteRenderer>();
+            sr = Instantiate(groundTilePrefab, new Vector3(x+0.5f, y+0.5f), Quaternion.identity,groundGrid.transform).GetComponent<SpriteRenderer>();
             sr.name = ("X: " + x + "Y: " + y);
             sr.sprite = sprites[grid[x,y]];
         } else{
-            sr = Instantiate(waterTilePrefab, new Vector3(x+0.5f, y+0.5f), Quaternion.identity).GetComponent<SpriteRenderer>();
+            sr = Instantiate(waterTilePrefab, new Vector3(x+0.5f, y+0.5f), Quaternion.identity,waterGrid.transform).GetComponent<SpriteRenderer>();
             sr.name = ("X: " + x + "Y: " + y);
         }
         
