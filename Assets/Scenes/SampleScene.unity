@@ -394,7 +394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &150028272
 Animator:
   serializedVersion: 4
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e5166ba55213246a4f461ebef9b95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 150028274}
+  player: {fileID: 1744014734}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2249,6 +2249,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+--- !u!1 &1744014733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744014734}
+  - component: {fileID: 1744014735}
+  m_Layer: 0
+  m_Name: AvatarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1744014734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744014733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35, y: 30, z: -0.15236072}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744014735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744014733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb65f26631188764cbac184e891ef635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  F_bases:
+  - {fileID: 1000012376641700, guid: 11fa4b8133f59dc418873fa8a4465226, type: 3}
+  - {fileID: 5475976031321806491, guid: 991de71ec507bfb47a22c4d3c54f4476, type: 3}
+  - {fileID: 1000010808079674, guid: f53d867ab7b4aaa41a32863c86d0e404, type: 3}
+  - {fileID: 5044201849653048685, guid: 40991c7a1dd5b44478d0d16c94fa80f9, type: 3}
+  - {fileID: 5382261713348775935, guid: 948c2fcb6bf51184aafbb86ff844ce33, type: 3}
+  - {fileID: 1000010811579778, guid: c6ddc69766729424496ad09b9ca4e4ea, type: 3}
+  - {fileID: 1000013153268654, guid: 60a8f0cba991b3f409a5ed31ffed819c, type: 3}
+  - {fileID: 5579432986559979403, guid: 28f4d746f6f3c2f4c95d059ded7d2562, type: 3}
+  F_eyes:
+  - {fileID: 1000012089598572, guid: 26a726c5df9a2384cbbeb0478bbf0c3a, type: 3}
+  F_outfits:
+  - {fileID: 1000012648844006, guid: eac0fa8f4feea4244bf987fe97f918fa, type: 3}
+  F_hair:
+  - {fileID: 1176943837233214, guid: 07cc89cf91117294b97ac0f5cd0d230e, type: 3}
 --- !u!1 &1768243729
 GameObject:
   m_ObjectHideFlags: 0

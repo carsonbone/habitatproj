@@ -432,7 +432,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -462,7 +462,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -474,7 +474,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -486,7 +486,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -498,7 +498,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3278,13 +3278,13 @@ TextureImporter:
       rpc female base tan_79: 21300158
       rpc female base tan_29: 21300058
       rpc female base tan_56: 21300112
-      rpc female base tan_33: 21300066
-      rpc female base tan_42: 21300084
-      rpc female base tan_121: 21300242
       rpc female base tan_85: 21300170
       rpc female base tan_91: 21300182
-      rpc female base tan_7: 21300014
+      rpc female base tan_121: 21300242
+      rpc female base tan_33: 21300066
       rpc female base tan_105: 21300210
+      rpc female base tan_7: 21300014
+      rpc female base tan_42: 21300084
       rpc female base tan_63: 21300126
       rpc female base tan_106: 21300212
       rpc female base tan_96: 21300192

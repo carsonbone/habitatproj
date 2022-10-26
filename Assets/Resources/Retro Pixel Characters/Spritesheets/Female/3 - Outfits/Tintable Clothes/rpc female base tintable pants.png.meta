@@ -432,7 +432,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -462,7 +462,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -474,7 +474,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -486,7 +486,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 512
@@ -510,7 +510,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3216,7 +3216,6 @@ TextureImporter:
       rpc female base tintable pants_66: 21300132
       rpc female base tintable pants_32: 21300064
       rpc female base tintable pants_116: 21300232
-      rpc female base tintable pants_113: 21300226
       rpc female base tintable pants_51: 21300102
       rpc female base tintable pants_103: 21300206
       rpc female base tintable pants_1: 21300002
@@ -3244,14 +3243,14 @@ TextureImporter:
       rpc female base tintable pants_30: 21300060
       rpc female base tintable pants_62: 21300124
       rpc female base tintable pants_112: 21300224
-      rpc female base tintable pants_17: 21300034
       rpc female base tintable pants_123: 21300246
+      rpc female base tintable pants_17: 21300034
       rpc female base tintable pants_3: 21300006
       rpc female base tintable pants_43: 21300086
       rpc female base tintable pants_77: 21300154
       rpc female base tintable pants_2: 21300004
-      rpc female base tintable pants_42: 21300084
       rpc female base tintable pants_104: 21300208
+      rpc female base tintable pants_42: 21300084
       rpc female base tintable pants_92: 21300184
       rpc female base tintable pants_93: 21300186
       rpc female base tintable pants_102: 21300204
@@ -3278,13 +3277,13 @@ TextureImporter:
       rpc female base tintable pants_105: 21300210
       rpc female base tintable pants_15: 21300030
       rpc female base tintable pants_16: 21300032
-      rpc female base tintable pants_52: 21300104
-      rpc female base tintable pants_49: 21300098
-      rpc female base tintable pants_90: 21300180
       rpc female base tintable pants_122: 21300244
+      rpc female base tintable pants_49: 21300098
+      rpc female base tintable pants_52: 21300104
       rpc female base tintable pants_121: 21300242
       rpc female base tintable pants_125: 21300250
       rpc female base tintable pants_89: 21300178
+      rpc female base tintable pants_90: 21300180
       rpc female base tintable pants_21: 21300042
       rpc female base tintable pants_73: 21300146
       rpc female base tintable pants_86: 21300172
@@ -3328,18 +3327,19 @@ TextureImporter:
       rpc female base tintable pants_82: 21300164
       rpc female base tintable pants_58: 21300116
       rpc female base tintable pants_69: 21300138
+      rpc female base tintable pants_113: 21300226
       rpc female base tintable pants_81: 21300162
-      rpc female base tintable pants_95: 21300190
+      rpc female base tintable pants_96: 21300192
       rpc female base tintable pants_10: 21300020
       rpc female base tintable pants_12: 21300024
+      rpc female base tintable pants_95: 21300190
+      rpc female base tintable pants_101: 21300202
       rpc female base tintable pants_29: 21300058
       rpc female base tintable pants_48: 21300096
-      rpc female base tintable pants_7: 21300014
-      rpc female base tintable pants_96: 21300192
       rpc female base tintable pants_19: 21300038
-      rpc female base tintable pants_106: 21300212
       rpc female base tintable pants_127: 21300254
-      rpc female base tintable pants_101: 21300202
+      rpc female base tintable pants_106: 21300212
+      rpc female base tintable pants_7: 21300014
       rpc female base tintable pants_94: 21300188
   spritePackingTag: 
   pSDRemoveMatte: 0

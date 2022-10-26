@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3212,7 +3212,6 @@ TextureImporter:
       rpc female wizard robes_71: 21300142
       rpc female wizard robes_36: 21300072
       rpc female wizard robes_109: 21300218
-      rpc female wizard robes_91: 21300182
       rpc female wizard robes_100: 21300200
       rpc female wizard robes_17: 21300034
       rpc female wizard robes_20: 21300040
@@ -3260,15 +3259,15 @@ TextureImporter:
       rpc female wizard robes_118: 21300236
       rpc female wizard robes_85: 21300170
       rpc female wizard robes_31: 21300062
-      rpc female wizard robes_62: 21300124
-      rpc female wizard robes_69: 21300138
-      rpc female wizard robes_34: 21300068
       rpc female wizard robes_4: 21300008
+      rpc female wizard robes_34: 21300068
+      rpc female wizard robes_62: 21300124
       rpc female wizard robes_33: 21300066
       rpc female wizard robes_83: 21300166
       rpc female wizard robes_92: 21300184
       rpc female wizard robes_125: 21300250
       rpc female wizard robes_117: 21300234
+      rpc female wizard robes_69: 21300138
       rpc female wizard robes_23: 21300046
       rpc female wizard robes_16: 21300032
       rpc female wizard robes_87: 21300174
@@ -3280,9 +3279,9 @@ TextureImporter:
       rpc female wizard robes_80: 21300160
       rpc female wizard robes_49: 21300098
       rpc female wizard robes_48: 21300096
-      rpc female wizard robes_112: 21300224
-      rpc female wizard robes_94: 21300188
       rpc female wizard robes_127: 21300254
+      rpc female wizard robes_94: 21300188
+      rpc female wizard robes_112: 21300224
       rpc female wizard robes_25: 21300050
       rpc female wizard robes_32: 21300064
       rpc female wizard robes_53: 21300106
@@ -3291,11 +3290,11 @@ TextureImporter:
       rpc female wizard robes_30: 21300060
       rpc female wizard robes_60: 21300120
       rpc female wizard robes_46: 21300092
-      rpc female wizard robes_88: 21300176
       rpc female wizard robes_97: 21300194
       rpc female wizard robes_103: 21300206
       rpc female wizard robes_12: 21300024
       rpc female wizard robes_99: 21300198
+      rpc female wizard robes_88: 21300176
       rpc female wizard robes_116: 21300232
       rpc female wizard robes_5: 21300010
       rpc female wizard robes_124: 21300248
@@ -3333,10 +3332,11 @@ TextureImporter:
       rpc female wizard robes_105: 21300210
       rpc female wizard robes_122: 21300244
       rpc female wizard robes_114: 21300228
-      rpc female wizard robes_21: 21300042
-      rpc female wizard robes_67: 21300134
-      rpc female wizard robes_37: 21300074
       rpc female wizard robes_41: 21300082
+      rpc female wizard robes_91: 21300182
+      rpc female wizard robes_67: 21300134
+      rpc female wizard robes_21: 21300042
+      rpc female wizard robes_37: 21300074
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

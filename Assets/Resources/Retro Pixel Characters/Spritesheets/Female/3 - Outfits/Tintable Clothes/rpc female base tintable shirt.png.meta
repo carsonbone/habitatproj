@@ -432,7 +432,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -462,7 +462,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -474,7 +474,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -486,7 +486,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 512
@@ -510,7 +510,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3231,24 +3231,24 @@ TextureImporter:
       rpc female base tintable shirt_124: 21300248
       rpc female base tintable shirt_73: 21300146
       rpc female base tintable shirt_103: 21300206
+      rpc female base tintable shirt_120: 21300240
       rpc female base tintable shirt_3: 21300006
       rpc female base tintable shirt_11: 21300022
       rpc female base tintable shirt_70: 21300140
       rpc female base tintable shirt_111: 21300222
       rpc female base tintable shirt_117: 21300234
       rpc female base tintable shirt_43: 21300086
+      rpc female base tintable shirt_80: 21300160
       rpc female base tintable shirt_68: 21300136
       rpc female base tintable shirt_27: 21300054
-      rpc female base tintable shirt_44: 21300088
       rpc female base tintable shirt_62: 21300124
+      rpc female base tintable shirt_44: 21300088
       rpc female base tintable shirt_84: 21300168
       rpc female base tintable shirt_33: 21300066
       rpc female base tintable shirt_67: 21300134
       rpc female base tintable shirt_13: 21300026
       rpc female base tintable shirt_32: 21300064
       rpc female base tintable shirt_2: 21300004
-      rpc female base tintable shirt_120: 21300240
-      rpc female base tintable shirt_80: 21300160
       rpc female base tintable shirt_58: 21300116
       rpc female base tintable shirt_101: 21300202
       rpc female base tintable shirt_39: 21300078

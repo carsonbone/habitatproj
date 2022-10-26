@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3209,9 +3209,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rpc female sword_89: 21300178
       rpc female sword_72: 21300144
-      rpc female sword_112: 21300224
       rpc female sword_12: 21300024
       rpc female sword_19: 21300038
       rpc female sword_106: 21300212
@@ -3222,7 +3220,6 @@ TextureImporter:
       rpc female sword_64: 21300128
       rpc female sword_24: 21300048
       rpc female sword_84: 21300168
-      rpc female sword_122: 21300244
       rpc female sword_105: 21300210
       rpc female sword_31: 21300062
       rpc female sword_39: 21300078
@@ -3245,11 +3242,11 @@ TextureImporter:
       rpc female sword_111: 21300222
       rpc female sword_97: 21300194
       rpc female sword_2: 21300004
-      rpc female sword_20: 21300040
+      rpc female sword_93: 21300186
       rpc female sword_29: 21300058
       rpc female sword_50: 21300100
       rpc female sword_25: 21300050
-      rpc female sword_93: 21300186
+      rpc female sword_20: 21300040
       rpc female sword_108: 21300216
       rpc female sword_11: 21300022
       rpc female sword_51: 21300102
@@ -3292,12 +3289,12 @@ TextureImporter:
       rpc female sword_6: 21300012
       rpc female sword_90: 21300180
       rpc female sword_58: 21300116
-      rpc female sword_63: 21300126
-      rpc female sword_102: 21300204
       rpc female sword_66: 21300132
-      rpc female sword_62: 21300124
-      rpc female sword_70: 21300140
+      rpc female sword_63: 21300126
       rpc female sword_104: 21300208
+      rpc female sword_62: 21300124
+      rpc female sword_102: 21300204
+      rpc female sword_70: 21300140
       rpc female sword_7: 21300014
       rpc female sword_121: 21300242
       rpc female sword_76: 21300152
@@ -3324,19 +3321,22 @@ TextureImporter:
       rpc female sword_13: 21300026
       rpc female sword_100: 21300200
       rpc female sword_77: 21300154
+      rpc female sword_122: 21300244
       rpc female sword_68: 21300136
-      rpc female sword_74: 21300148
+      rpc female sword_89: 21300178
       rpc female sword_34: 21300068
-      rpc female sword_81: 21300162
+      rpc female sword_74: 21300148
       rpc female sword_16: 21300032
+      rpc female sword_81: 21300162
       rpc female sword_65: 21300130
       rpc female sword_1: 21300002
+      rpc female sword_78: 21300156
       rpc female sword_54: 21300108
       rpc female sword_79: 21300158
-      rpc female sword_35: 21300070
       rpc female sword_53: 21300106
+      rpc female sword_35: 21300070
       rpc female sword_98: 21300196
-      rpc female sword_78: 21300156
+      rpc female sword_112: 21300224
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

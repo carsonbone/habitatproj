@@ -432,7 +432,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -462,7 +462,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -474,7 +474,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -486,7 +486,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 512
@@ -510,7 +510,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3242,18 +3242,18 @@ TextureImporter:
       rpc female bat_36: 21300072
       rpc female bat_34: 21300068
       rpc female bat_104: 21300208
-      rpc female bat_12: 21300024
-      rpc female bat_41: 21300082
-      rpc female bat_67: 21300134
       rpc female bat_45: 21300090
-      rpc female bat_58: 21300116
-      rpc female bat_76: 21300152
+      rpc female bat_12: 21300024
+      rpc female bat_67: 21300134
+      rpc female bat_41: 21300082
       rpc female bat_52: 21300104
+      rpc female bat_76: 21300152
       rpc female bat_82: 21300164
       rpc female bat_84: 21300168
-      rpc female bat_4: 21300008
       rpc female bat_123: 21300246
+      rpc female bat_58: 21300116
       rpc female bat_109: 21300218
+      rpc female bat_4: 21300008
       rpc female bat_100: 21300200
       rpc female bat_77: 21300154
       rpc female bat_86: 21300172
@@ -3279,25 +3279,25 @@ TextureImporter:
       rpc female bat_99: 21300198
       rpc female bat_119: 21300238
       rpc female bat_25: 21300050
-      rpc female bat_95: 21300190
       rpc female bat_125: 21300250
+      rpc female bat_95: 21300190
       rpc female bat_50: 21300100
       rpc female bat_121: 21300242
       rpc female bat_15: 21300030
       rpc female bat_8: 21300016
-      rpc female bat_46: 21300092
       rpc female bat_53: 21300106
       rpc female bat_75: 21300150
       rpc female bat_56: 21300112
-      rpc female bat_90: 21300180
+      rpc female bat_46: 21300092
       rpc female bat_96: 21300192
+      rpc female bat_90: 21300180
       rpc female bat_94: 21300188
       rpc female bat_68: 21300136
       rpc female bat_116: 21300232
       rpc female bat_22: 21300044
+      rpc female bat_73: 21300146
       rpc female bat_57: 21300114
       rpc female bat_28: 21300056
-      rpc female bat_73: 21300146
       rpc female bat_89: 21300178
       rpc female bat_117: 21300234
       rpc female bat_114: 21300228

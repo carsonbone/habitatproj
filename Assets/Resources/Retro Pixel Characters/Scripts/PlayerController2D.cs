@@ -14,11 +14,17 @@ public class PlayerController2D : MonoBehaviour {
 	private MoveState moveState	= MoveState.Stand; //Create and set a MoveState variable for the controller.
 	private Animator anim; //The parent animator.
 
+    
+
 	void Start()
 	{
 		origSpeed = moveSpeed;
 		anim = transform.GetComponent<Animator>();
-	}
+
+        GameObject camera = GameObject.Find("Main Camera");
+
+        camera.GetComponent<CameraScript>().player = this.gameObject;
+    }
 
 	/// <summary>
 	/// Toggles the controller's movement.

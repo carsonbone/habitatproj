@@ -5,7 +5,9 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform player;
+
+    public GameObject player;
+
     void Start()
     {
         
@@ -14,6 +16,16 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, -10); //just track onto the player
+        Transform temp2 = player.transform;
+        transform.position = new Vector3(temp2.position.x, temp2.position.y, -10); //just track onto the player
     }
+
+    /*
+    public void WhoLooking(Transform temp)
+    {
+
+        player = temp;
+        Debug.Log("wholooking");
+        
+    }*/
 }

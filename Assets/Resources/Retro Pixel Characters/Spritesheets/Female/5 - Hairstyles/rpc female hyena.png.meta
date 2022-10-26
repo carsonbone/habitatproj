@@ -816,7 +816,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -846,7 +846,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -858,7 +858,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -882,7 +882,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -894,7 +894,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3655,15 +3655,15 @@ TextureImporter:
       rpc female hyena_7: 21300270
       rpc female hyena_5: 21300266
       rpc female hyena_108: 21300472
-      rpc female hyena_32: 21300320
       rpc female hyena_13: 21300282
       rpc female hyena_76: 21300408
+      rpc female hyena_123: 21300502
       rpc female hyena_113: 21300482
       rpc female hyena_21: 21300298
       rpc female hyena_30: 21300316
       rpc female hyena_36: 21300328
       rpc female hyena_91: 21300438
-      rpc female hyena_123: 21300502
+      rpc female hyena_32: 21300320
       rpc female hyena_11: 21300278
       rpc female hyena_67: 21300390
       rpc female hyena_27: 21300310
@@ -3672,13 +3672,13 @@ TextureImporter:
       rpc female hyena_50: 21300356
       rpc female hyena_103: 21300462
       rpc female hyena_45: 21300346
-      rpc female hyena_48: 21300352
-      rpc female hyena_81: 21300418
       rpc female hyena_46: 21300348
+      rpc female hyena_48: 21300352
+      rpc female hyena_95: 21300446
       rpc female hyena_115: 21300486
       rpc female hyena_42: 21300340
-      rpc female hyena_95: 21300446
       rpc female hyena_111: 21300478
+      rpc female hyena_81: 21300418
       rpc female hyena_66: 21300388
       rpc female hyena_15: 21300286
       rpc female hyena_0: 21300256

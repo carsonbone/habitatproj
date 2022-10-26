@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3210,9 +3210,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       rpc female brown_101: 21300202
-      rpc female brown_125: 21300250
-      rpc female brown_109: 21300218
+      rpc female brown_31: 21300062
       rpc female brown_111: 21300222
+      rpc female brown_14: 21300028
       rpc female brown_115: 21300230
       rpc female brown_123: 21300246
       rpc female brown_8: 21300016
@@ -3330,13 +3330,13 @@ TextureImporter:
       rpc female brown_3: 21300006
       rpc female brown_24: 21300048
       rpc female brown_19: 21300038
-      rpc female brown_64: 21300128
-      rpc female brown_14: 21300028
-      rpc female brown_79: 21300158
-      rpc female brown_31: 21300062
-      rpc female brown_65: 21300130
-      rpc female brown_7: 21300014
       rpc female brown_86: 21300172
+      rpc female brown_64: 21300128
+      rpc female brown_7: 21300014
+      rpc female brown_79: 21300158
+      rpc female brown_65: 21300130
+      rpc female brown_125: 21300250
+      rpc female brown_109: 21300218
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

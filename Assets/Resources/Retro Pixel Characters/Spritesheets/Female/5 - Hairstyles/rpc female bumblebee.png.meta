@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 512
@@ -518,7 +518,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3243,7 +3243,6 @@ TextureImporter:
       rpc female bumblebee_68: 21300136
       rpc female bumblebee_77: 21300154
       rpc female bumblebee_92: 21300184
-      rpc female bumblebee_120: 21300240
       rpc female bumblebee_110: 21300220
       rpc female bumblebee_18: 21300036
       rpc female bumblebee_83: 21300166
@@ -3281,8 +3280,8 @@ TextureImporter:
       rpc female bumblebee_54: 21300108
       rpc female bumblebee_58: 21300116
       rpc female bumblebee_3: 21300006
-      rpc female bumblebee_45: 21300090
       rpc female bumblebee_115: 21300230
+      rpc female bumblebee_45: 21300090
       rpc female bumblebee_31: 21300062
       rpc female bumblebee_43: 21300086
       rpc female bumblebee_100: 21300200
@@ -3291,10 +3290,10 @@ TextureImporter:
       rpc female bumblebee_71: 21300142
       rpc female bumblebee_80: 21300160
       rpc female bumblebee_90: 21300180
-      rpc female bumblebee_76: 21300152
+      rpc female bumblebee_112: 21300224
       rpc female bumblebee_94: 21300188
       rpc female bumblebee_4: 21300008
-      rpc female bumblebee_112: 21300224
+      rpc female bumblebee_76: 21300152
       rpc female bumblebee_7: 21300014
       rpc female bumblebee_32: 21300064
       rpc female bumblebee_36: 21300072
@@ -3343,6 +3342,7 @@ TextureImporter:
       rpc female bumblebee_48: 21300096
       rpc female bumblebee_86: 21300172
       rpc female bumblebee_104: 21300208
+      rpc female bumblebee_120: 21300240
       rpc female bumblebee_81: 21300162
       rpc female bumblebee_10: 21300020
       rpc female bumblebee_73: 21300146

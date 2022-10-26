@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3246,8 +3246,8 @@ TextureImporter:
       rpc female base dark_45: 21300090
       rpc female base dark_69: 21300138
       rpc female base dark_76: 21300152
-      rpc female base dark_6: 21300012
       rpc female base dark_85: 21300170
+      rpc female base dark_6: 21300012
       rpc female base dark_43: 21300086
       rpc female base dark_114: 21300228
       rpc female base dark_19: 21300038
@@ -3255,14 +3255,15 @@ TextureImporter:
       rpc female base dark_90: 21300180
       rpc female base dark_4: 21300008
       rpc female base dark_0: 21300000
+      rpc female base dark_119: 21300238
       rpc female base dark_41: 21300082
       rpc female base dark_34: 21300068
-      rpc female base dark_50: 21300100
       rpc female base dark_29: 21300058
       rpc female base dark_39: 21300078
-      rpc female base dark_64: 21300128
+      rpc female base dark_50: 21300100
       rpc female base dark_54: 21300108
       rpc female base dark_55: 21300110
+      rpc female base dark_64: 21300128
       rpc female base dark_81: 21300162
       rpc female base dark_102: 21300204
       rpc female base dark_106: 21300212
@@ -3271,7 +3272,6 @@ TextureImporter:
       rpc female base dark_11: 21300022
       rpc female base dark_36: 21300072
       rpc female base dark_80: 21300160
-      rpc female base dark_119: 21300238
       rpc female base dark_26: 21300052
       rpc female base dark_91: 21300182
       rpc female base dark_117: 21300234

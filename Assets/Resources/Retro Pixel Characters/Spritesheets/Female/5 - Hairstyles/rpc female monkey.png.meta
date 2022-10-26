@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 512
@@ -518,7 +518,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3286,10 +3286,10 @@ TextureImporter:
       rpc female monkey_99: 21300198
       rpc female monkey_88: 21300176
       rpc female monkey_57: 21300114
-      rpc female monkey_86: 21300172
       rpc female monkey_91: 21300182
       rpc female monkey_41: 21300082
       rpc female monkey_39: 21300078
+      rpc female monkey_86: 21300172
       rpc female monkey_19: 21300038
       rpc female monkey_36: 21300072
       rpc female monkey_55: 21300110
@@ -3301,13 +3301,13 @@ TextureImporter:
       rpc female monkey_29: 21300058
       rpc female monkey_31: 21300062
       rpc female monkey_75: 21300150
-      rpc female monkey_74: 21300148
-      rpc female monkey_72: 21300144
       rpc female monkey_126: 21300252
+      rpc female monkey_72: 21300144
       rpc female monkey_20: 21300040
       rpc female monkey_53: 21300106
       rpc female monkey_92: 21300184
       rpc female monkey_103: 21300206
+      rpc female monkey_74: 21300148
       rpc female monkey_26: 21300052
       rpc female monkey_77: 21300154
       rpc female monkey_65: 21300130
@@ -3346,8 +3346,8 @@ TextureImporter:
       rpc female monkey_79: 21300158
       rpc female monkey_85: 21300170
       rpc female monkey_82: 21300164
-      rpc female monkey_28: 21300056
       rpc female monkey_56: 21300112
+      rpc female monkey_28: 21300056
       rpc female monkey_89: 21300178
   spritePackingTag: 
   pSDRemoveMatte: 0

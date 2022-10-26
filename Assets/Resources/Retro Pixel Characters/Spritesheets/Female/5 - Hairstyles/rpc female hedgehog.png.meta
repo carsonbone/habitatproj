@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 512
@@ -518,7 +518,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3221,9 +3221,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rpc female hedgehog_94: 21300188
       rpc female hedgehog_110: 21300220
-      rpc female hedgehog_109: 21300218
+      rpc female hedgehog_89: 21300178
       rpc female hedgehog_9: 21300018
       rpc female hedgehog_55: 21300110
       rpc female hedgehog_22: 21300044
@@ -3287,19 +3286,19 @@ TextureImporter:
       rpc female hedgehog_79: 21300158
       rpc female hedgehog_58: 21300116
       rpc female hedgehog_0: 21300000
-      rpc female hedgehog_30: 21300060
-      rpc female hedgehog_38: 21300076
       rpc female hedgehog_119: 21300238
+      rpc female hedgehog_38: 21300076
+      rpc female hedgehog_30: 21300060
       rpc female hedgehog_102: 21300204
       rpc female hedgehog_17: 21300034
       rpc female hedgehog_81: 21300162
       rpc female hedgehog_19: 21300038
       rpc female hedgehog_8: 21300016
       rpc female hedgehog_28: 21300056
-      rpc female hedgehog_3: 21300006
-      rpc female hedgehog_84: 21300168
-      rpc female hedgehog_21: 21300042
       rpc female hedgehog_51: 21300102
+      rpc female hedgehog_3: 21300006
+      rpc female hedgehog_21: 21300042
+      rpc female hedgehog_84: 21300168
       rpc female hedgehog_108: 21300216
       rpc female hedgehog_62: 21300124
       rpc female hedgehog_14: 21300028
@@ -3344,10 +3343,11 @@ TextureImporter:
       rpc female hedgehog_82: 21300164
       rpc female hedgehog_42: 21300084
       rpc female hedgehog_70: 21300140
+      rpc female hedgehog_94: 21300188
       rpc female hedgehog_18: 21300036
-      rpc female hedgehog_89: 21300178
       rpc female hedgehog_90: 21300180
       rpc female hedgehog_92: 21300184
+      rpc female hedgehog_109: 21300218
       rpc female hedgehog_78: 21300156
   spritePackingTag: 
   pSDRemoveMatte: 0
