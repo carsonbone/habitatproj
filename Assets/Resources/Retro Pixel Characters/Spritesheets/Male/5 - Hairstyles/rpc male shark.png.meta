@@ -3210,7 +3210,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       rpc male shark_101: 21300202
-      rpc male shark_58: 21300116
+      rpc male shark_66: 21300132
       rpc male shark_69: 21300138
       rpc male shark_89: 21300178
       rpc male shark_95: 21300190
@@ -3336,7 +3336,7 @@ TextureImporter:
       rpc male shark_99: 21300198
       rpc male shark_20: 21300040
       rpc male shark_25: 21300050
-      rpc male shark_66: 21300132
+      rpc male shark_58: 21300116
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

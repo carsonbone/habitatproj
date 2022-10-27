@@ -14,10 +14,18 @@ public class PlayerController2D : MonoBehaviour {
 	private MoveState moveState	= MoveState.Stand; //Create and set a MoveState variable for the controller.
 	private Animator anim; //The parent animator.
 
-    
+    public Joystick joystick; //our joystick object
 
-	void Start()
+
+
+    //ints we use to find out where the joystick is going
+    int horizontalMove = 0;
+    int verticalMove = 0;
+
+    void Start()
 	{
+
+        joystick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
 		origSpeed = moveSpeed;
 		anim = transform.GetComponent<Animator>();
 
@@ -39,10 +47,10 @@ public class PlayerController2D : MonoBehaviour {
 	{
 		if (moveEnabled == true)
 		{
-			if (moveVector.x > moveSense || moveVector.x < -moveSense || moveVector.y > moveSense || moveVector.y < -moveSense)
-			{
+			//if (moveVector.x > moveSense || moveVector.x < -moveSense || moveVector.y > moveSense || moveVector.y < -moveSense)
+			//{
 				transform.Translate(moveVector * (moveSpeed / 100)); //If movement is enabled and any movement above the threshold (sense) is detected, move controller.
-			}
+			//}
 		}
 	}
 
@@ -51,11 +59,38 @@ public class PlayerController2D : MonoBehaviour {
 		//Only check for movement if the movement bool is set to true.
 		if (moveEnabled == true)
 		{
-			//Set the move vector to horizontal and vertical input axis values.
-			moveVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-			//If horizontal or vertical axis is above the threshold value (moveSense), set the move state to Walk.
-			if (Input.GetAxisRaw("Horizontal") > moveSense || Input.GetAxisRaw("Horizontal") < (-moveSense) || Input.GetAxisRaw("Vertical") > moveSense || Input.GetAxisRaw("Vertical") < (-moveSense))
+            if (joystick.Horizontal >= .2f)
+            {
+                horizontalMove = 1;
+            }
+            if (joystick.Horizontal <= -.2f)
+            {
+                horizontalMove = -1;
+            }
+            if (joystick.Vertical >= .2f)
+            {
+                verticalMove = 1;
+            }
+            if (joystick.Vertical <= -.2f)
+            {
+                verticalMove = -1;
+            }
+            if (Mathf.Abs(joystick.Vertical) < .2f)
+            {
+                verticalMove = 0;
+            }
+            if (Mathf.Abs(joystick.Horizontal) < .2f)
+            {
+                horizontalMove = 0;
+            }
+
+
+            //Set the move vector to horizontal and vertical input axis values.
+            moveVector = new Vector2(horizontalMove, verticalMove);
+
+            //If horizontal or vertical axis is above the threshold value (moveSense), set the move state to Walk.
+            if (horizontalMove != 0 || verticalMove != 0)
 			{
 				moveState = MoveState.Walk;
 

@@ -136,7 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b26b131472442c4982c588da5ed6124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 6
+  joystick: {fileID: 0}
 --- !u!61 &61000012834184380
 BoxCollider2D:
   m_ObjectHideFlags: 0

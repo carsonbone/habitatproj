@@ -816,7 +816,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -846,7 +846,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -858,7 +858,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -882,7 +882,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -894,7 +894,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3619,6 +3619,7 @@ TextureImporter:
       rpc male panda_30: 21300316
       rpc male panda_46: 21300348
       rpc male panda_109: 21300474
+      rpc male panda_100: 21300456
       rpc male panda_41: 21300338
       rpc male panda_9: 21300274
       rpc male panda_94: 21300444
@@ -3628,21 +3629,20 @@ TextureImporter:
       rpc male panda_16: 21300288
       rpc male panda_82: 21300420
       rpc male panda_10: 21300276
-      rpc male panda_21: 21300298
       rpc male panda_44: 21300344
+      rpc male panda_21: 21300298
       rpc male panda_84: 21300424
-      rpc male panda_100: 21300456
       rpc male panda_124: 21300504
       rpc male panda_68: 21300392
       rpc male panda_54: 21300364
-      rpc male panda_62: 21300380
-      rpc male panda_83: 21300422
       rpc male panda_90: 21300436
-      rpc male panda_101: 21300458
       rpc male panda_96: 21300448
+      rpc male panda_62: 21300380
+      rpc male panda_127: 21300510
+      rpc male panda_83: 21300422
+      rpc male panda_101: 21300458
       rpc male panda_76: 21300408
       rpc male panda_102: 21300460
-      rpc male panda_127: 21300510
       rpc male panda_33: 21300322
       rpc male panda_63: 21300382
       rpc male panda_4: 21300264
@@ -3657,8 +3657,8 @@ TextureImporter:
       rpc male panda_22: 21300300
       rpc male panda_39: 21300334
       rpc male panda_42: 21300340
-      rpc male panda_97: 21300450
       rpc male panda_121: 21300498
+      rpc male panda_97: 21300450
       rpc male panda_123: 21300502
       rpc male panda_117: 21300490
       rpc male panda_59: 21300374
@@ -3680,13 +3680,13 @@ TextureImporter:
       rpc male panda_23: 21300302
       rpc male panda_86: 21300428
       rpc male panda_13: 21300282
-      rpc male panda_19: 21300294
       rpc male panda_72: 21300400
-      rpc male panda_31: 21300318
+      rpc male panda_19: 21300294
       rpc male panda_114: 21300484
+      rpc male panda_31: 21300318
       rpc male panda_5: 21300266
-      rpc male panda_17: 21300290
       rpc male panda_75: 21300406
+      rpc male panda_17: 21300290
       rpc male panda_99: 21300454
       rpc male panda_80: 21300416
       rpc male panda_2: 21300260

@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3212,15 +3212,14 @@ TextureImporter:
       rpc male grey_30: 21300060
       rpc male grey_12: 21300024
       rpc male grey_20: 21300040
-      rpc male grey_111: 21300222
-      rpc male grey_61: 21300122
       rpc male grey_72: 21300144
       rpc male grey_1: 21300002
-      rpc male grey_75: 21300150
+      rpc male grey_61: 21300122
       rpc male grey_11: 21300022
       rpc male grey_34: 21300068
       rpc male grey_3: 21300006
       rpc male grey_121: 21300242
+      rpc male grey_75: 21300150
       rpc male grey_27: 21300054
       rpc male grey_115: 21300230
       rpc male grey_127: 21300254
@@ -3305,6 +3304,7 @@ TextureImporter:
       rpc male grey_35: 21300070
       rpc male grey_103: 21300206
       rpc male grey_79: 21300158
+      rpc male grey_111: 21300222
       rpc male grey_46: 21300092
       rpc male grey_49: 21300098
       rpc male grey_53: 21300106
@@ -3313,8 +3313,8 @@ TextureImporter:
       rpc male grey_41: 21300082
       rpc male grey_82: 21300164
       rpc male grey_13: 21300026
-      rpc male grey_73: 21300146
       rpc male grey_122: 21300244
+      rpc male grey_73: 21300146
       rpc male grey_48: 21300096
       rpc male grey_92: 21300184
       rpc male grey_88: 21300176

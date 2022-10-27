@@ -432,7 +432,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -462,7 +462,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -474,7 +474,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -486,7 +486,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -498,7 +498,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3203,19 +3203,18 @@ TextureImporter:
     nameFileIdTable:
       rpc male base elf_3: 21300006
       rpc male base elf_106: 21300212
-      rpc male base elf_92: 21300184
+      rpc male base elf_83: 21300166
+      rpc male base elf_118: 21300236
       rpc male base elf_1: 21300002
       rpc male base elf_60: 21300120
       rpc male base elf_66: 21300132
       rpc male base elf_104: 21300208
       rpc male base elf_50: 21300100
-      rpc male base elf_113: 21300226
       rpc male base elf_25: 21300050
       rpc male base elf_114: 21300228
       rpc male base elf_86: 21300172
       rpc male base elf_126: 21300252
       rpc male base elf_122: 21300244
-      rpc male base elf_118: 21300236
       rpc male base elf_119: 21300238
       rpc male base elf_99: 21300198
       rpc male base elf_65: 21300130
@@ -3228,13 +3227,13 @@ TextureImporter:
       rpc male base elf_120: 21300240
       rpc male base elf_53: 21300106
       rpc male base elf_43: 21300086
-      rpc male base elf_91: 21300182
       rpc male base elf_112: 21300224
-      rpc male base elf_54: 21300108
       rpc male base elf_123: 21300246
-      rpc male base elf_28: 21300056
+      rpc male base elf_54: 21300108
       rpc male base elf_44: 21300088
       rpc male base elf_124: 21300248
+      rpc male base elf_91: 21300182
+      rpc male base elf_28: 21300056
       rpc male base elf_116: 21300232
       rpc male base elf_15: 21300030
       rpc male base elf_11: 21300022
@@ -3284,9 +3283,9 @@ TextureImporter:
       rpc male base elf_102: 21300204
       rpc male base elf_33: 21300066
       rpc male base elf_19: 21300038
-      rpc male base elf_77: 21300154
-      rpc male base elf_26: 21300052
       rpc male base elf_98: 21300196
+      rpc male base elf_26: 21300052
+      rpc male base elf_77: 21300154
       rpc male base elf_70: 21300140
       rpc male base elf_105: 21300210
       rpc male base elf_103: 21300206
@@ -3321,14 +3320,15 @@ TextureImporter:
       rpc male base elf_24: 21300048
       rpc male base elf_27: 21300054
       rpc male base elf_0: 21300000
-      rpc male base elf_23: 21300046
       rpc male base elf_59: 21300118
+      rpc male base elf_23: 21300046
+      rpc male base elf_92: 21300184
       rpc male base elf_109: 21300218
       rpc male base elf_89: 21300178
-      rpc male base elf_18: 21300036
+      rpc male base elf_113: 21300226
       rpc male base elf_47: 21300094
-      rpc male base elf_83: 21300166
       rpc male base elf_78: 21300156
+      rpc male base elf_18: 21300036
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

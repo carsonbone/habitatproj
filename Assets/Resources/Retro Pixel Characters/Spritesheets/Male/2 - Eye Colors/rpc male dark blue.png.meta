@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3234,24 +3234,24 @@ TextureImporter:
       rpc male dark blue_114: 21300228
       rpc male dark blue_61: 21300122
       rpc male dark blue_32: 21300064
+      rpc male dark blue_69: 21300138
       rpc male dark blue_19: 21300038
       rpc male dark blue_63: 21300126
-      rpc male dark blue_40: 21300080
       rpc male dark blue_49: 21300098
-      rpc male dark blue_13: 21300026
+      rpc male dark blue_120: 21300240
       rpc male dark blue_57: 21300114
+      rpc male dark blue_40: 21300080
       rpc male dark blue_3: 21300006
       rpc male dark blue_53: 21300106
-      rpc male dark blue_120: 21300240
-      rpc male dark blue_69: 21300138
       rpc male dark blue_100: 21300200
+      rpc male dark blue_13: 21300026
       rpc male dark blue_12: 21300024
       rpc male dark blue_117: 21300234
       rpc male dark blue_37: 21300074
-      rpc male dark blue_62: 21300124
-      rpc male dark blue_31: 21300062
       rpc male dark blue_74: 21300148
+      rpc male dark blue_31: 21300062
       rpc male dark blue_88: 21300176
+      rpc male dark blue_62: 21300124
       rpc male dark blue_77: 21300154
       rpc male dark blue_5: 21300010
       rpc male dark blue_58: 21300116

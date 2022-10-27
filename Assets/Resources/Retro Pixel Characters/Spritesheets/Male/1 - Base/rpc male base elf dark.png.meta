@@ -432,7 +432,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -462,7 +462,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -474,7 +474,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -486,7 +486,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -498,7 +498,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3205,7 +3205,6 @@ TextureImporter:
       rpc male base elf dark_93: 21300186
       rpc male base elf dark_97: 21300194
       rpc male base elf dark_102: 21300204
-      rpc male base elf dark_89: 21300178
       rpc male base elf dark_69: 21300138
       rpc male base elf dark_5: 21300010
       rpc male base elf dark_18: 21300036
@@ -3229,12 +3228,12 @@ TextureImporter:
       rpc male base elf dark_48: 21300096
       rpc male base elf dark_37: 21300074
       rpc male base elf dark_15: 21300030
-      rpc male base elf dark_94: 21300188
       rpc male base elf dark_113: 21300226
       rpc male base elf dark_74: 21300148
       rpc male base elf dark_105: 21300210
-      rpc male base elf dark_95: 21300190
+      rpc male base elf dark_94: 21300188
       rpc male base elf dark_104: 21300208
+      rpc male base elf dark_95: 21300190
       rpc male base elf dark_120: 21300240
       rpc male base elf dark_76: 21300152
       rpc male base elf dark_31: 21300062
@@ -3276,14 +3275,14 @@ TextureImporter:
       rpc male base elf dark_118: 21300236
       rpc male base elf dark_79: 21300158
       rpc male base elf dark_25: 21300050
-      rpc male base elf dark_38: 21300076
       rpc male base elf dark_123: 21300246
-      rpc male base elf dark_103: 21300206
       rpc male base elf dark_116: 21300232
+      rpc male base elf dark_38: 21300076
       rpc male base elf dark_45: 21300090
       rpc male base elf dark_62: 21300124
       rpc male base elf dark_26: 21300052
       rpc male base elf dark_34: 21300068
+      rpc male base elf dark_103: 21300206
       rpc male base elf dark_68: 21300136
       rpc male base elf dark_30: 21300060
       rpc male base elf dark_43: 21300086
@@ -3319,13 +3318,14 @@ TextureImporter:
       rpc male base elf dark_27: 21300054
       rpc male base elf dark_88: 21300176
       rpc male base elf dark_51: 21300102
+      rpc male base elf dark_47: 21300094
       rpc male base elf dark_0: 21300000
       rpc male base elf dark_52: 21300104
-      rpc male base elf dark_83: 21300166
       rpc male base elf dark_9: 21300018
       rpc male base elf dark_11: 21300022
+      rpc male base elf dark_83: 21300166
       rpc male base elf dark_77: 21300154
-      rpc male base elf dark_47: 21300094
+      rpc male base elf dark_89: 21300178
       rpc male base elf dark_57: 21300114
       rpc male base elf dark_86: 21300172
       rpc male base elf dark_100: 21300200

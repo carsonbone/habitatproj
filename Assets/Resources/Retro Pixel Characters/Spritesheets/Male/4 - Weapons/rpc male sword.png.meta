@@ -440,7 +440,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -470,7 +470,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 512
@@ -482,7 +482,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 512
@@ -494,7 +494,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 512
@@ -506,7 +506,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -3241,15 +3241,15 @@ TextureImporter:
       rpc male sword_112: 21300224
       rpc male sword_79: 21300158
       rpc male sword_104: 21300208
+      rpc male sword_117: 21300234
       rpc male sword_69: 21300138
-      rpc male sword_108: 21300216
       rpc male sword_57: 21300114
       rpc male sword_16: 21300032
-      rpc male sword_64: 21300128
-      rpc male sword_117: 21300234
-      rpc male sword_124: 21300248
       rpc male sword_121: 21300242
+      rpc male sword_108: 21300216
+      rpc male sword_64: 21300128
       rpc male sword_38: 21300076
+      rpc male sword_124: 21300248
       rpc male sword_21: 21300042
       rpc male sword_98: 21300196
       rpc male sword_101: 21300202
@@ -3288,9 +3288,9 @@ TextureImporter:
       rpc male sword_123: 21300246
       rpc male sword_99: 21300198
       rpc male sword_61: 21300122
-      rpc male sword_70: 21300140
       rpc male sword_91: 21300182
       rpc male sword_92: 21300184
+      rpc male sword_70: 21300140
       rpc male sword_4: 21300008
       rpc male sword_56: 21300112
       rpc male sword_110: 21300220
