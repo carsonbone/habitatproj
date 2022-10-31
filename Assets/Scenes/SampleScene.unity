@@ -2470,6 +2470,14 @@ MonoBehaviour:
     type: 3}
   groundGrid: {fileID: 387110052}
   waterGrid: {fileID: 859524413}
+  testSkull: {fileID: 1715129793456428531, guid: 2dd765f638d57e54a80977cdc5b6eb69,
+    type: 3}
+  testBench: {fileID: 5814448469293321587, guid: 74b1434f12343934386f87f9573a6d69,
+    type: 3}
+  testDoor: {fileID: 7539013855948320784, guid: 2546f889a9d71c244832b8f023fee2c4,
+    type: 3}
+  testFountain: {fileID: 5382865152933451054, guid: 5de0ee74f8ced1d4ca40ea009c3b2582,
+    type: 3}
   sprites:
   - {fileID: 5927350949019876849, guid: 7ef181ba9960ad14b976972914b22408, type: 3}
   - {fileID: -2671460228953875570, guid: 7ef181ba9960ad14b976972914b22408, type: 3}

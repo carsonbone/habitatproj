@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4442344224835103452}
   - component: {fileID: 69582124023696163}
   m_Layer: 0
-  m_Name: TestFountain
+  m_Name: testfountain
   m_TagString: PlaceableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
