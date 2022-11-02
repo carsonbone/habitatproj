@@ -20,8 +20,8 @@ public class GridManager : MonoBehaviour
     public int[,] grid;
     public int[,] rotationGrid;
     public string[,] furnitureGrid;
-    private int columns = 49;
-    private int rows = 49;
+    private int columns = 50;
+    private int rows = 50;
 
     private Tile[] tileArray;
     // Start is called before the first frame update
@@ -105,6 +105,9 @@ public class GridManager : MonoBehaviour
             }
             furnitureInformation = furnitureInformation + furniture.transform.rotation.eulerAngles.z + ",";
         }
+        #if UNITY_ANDROID
+            activity.CallStatic("savePositions", new object[] {furnitureInformation});
+        #endif
     }
 
     public void spawnMap(string gridValues){
