@@ -95,13 +95,14 @@ public class GridManager : MonoBehaviour
         foreach(var furniture in furnitureList){
             furnitureInformation = furnitureInformation + (furniture.transform.position.x - 0.5f) + " ";
             furnitureInformation = furnitureInformation + (furniture.transform.position.y - 0.5f) + " ";
-            if(furniture.name.Equals("testskull(clone)")){
+            Debug.Log(furniture.name);
+            if(furniture.name.Equals("testskull(Clone)")){
                 furnitureInformation = furnitureInformation + "skull" + " ";
-            } else if(furniture.name.Equals("testdoor(clone)")){
+            } else if(furniture.name.Equals("testdoor(Clone)")){
                 furnitureInformation = furnitureInformation + "door" + " ";
-            } else if(furniture.name.Equals("testbench(clone)")){
+            } else if(furniture.name.Equals("testBench(Clone)")){
                 furnitureInformation = furnitureInformation + "bench" + " ";
-            } else if(furniture.name.Equals("testfountain(clone)")){
+            } else if(furniture.name.Equals("TestFountain(Clone)")){
                 furnitureInformation = furnitureInformation + "fountain" + " ";
             }
             furnitureInformation = furnitureInformation + (furniture.transform.rotation.eulerAngles.z/90) + ",";
