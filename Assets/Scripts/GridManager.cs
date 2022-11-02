@@ -48,6 +48,7 @@ public class GridManager : MonoBehaviour
                 
             } 
         }
+        InvokeRepeating("SavePositions", 15.0f, 15.0f);
         for(int i = 0; i < columns; i ++){
             for(int j = 0; j < rows; j ++){
                 if(i > 0 && j > 0 && i < (rows - 1) && j < (columns - 1) && grid[i,j] > 0){
@@ -92,8 +93,8 @@ public class GridManager : MonoBehaviour
         string furnitureInformation = "";
         var objectCount = furnitureList.Length;
         foreach(var furniture in furnitureList){
-            furnitureInformation = furnitureInformation + furniture.transform.position.x + " ";
-            furnitureInformation = furnitureInformation + furniture.transform.position.y + " ";
+            furnitureInformation = furnitureInformation + (furniture.transform.position.x - 0.5f) + " ";
+            furnitureInformation = furnitureInformation + (furniture.transform.position.y - 0.5f) + " ";
             if(furniture.name.Equals("testskull(clone)")){
                 furnitureInformation = furnitureInformation + "skull" + " ";
             } else if(furniture.name.Equals("testdoor(clone)")){
@@ -103,8 +104,9 @@ public class GridManager : MonoBehaviour
             } else if(furniture.name.Equals("testfountain(clone)")){
                 furnitureInformation = furnitureInformation + "fountain" + " ";
             }
-            furnitureInformation = furnitureInformation + furniture.transform.rotation.eulerAngles.z + ",";
+            furnitureInformation = furnitureInformation + (furniture.transform.rotation.eulerAngles.z/90) + ",";
         }
+        Debug.Log(furnitureInformation);
         #if UNITY_ANDROID
             activity.CallStatic("savePositions", new object[] {furnitureInformation});
         #endif
