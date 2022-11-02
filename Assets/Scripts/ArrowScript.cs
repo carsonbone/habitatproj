@@ -39,9 +39,11 @@ public class ArrowScript : MonoBehaviour
 
     public void Pressed(){
 
+        Debug.Log(this.gameObject.name + " Has been pressed");
         if(incdec){
             if(type == 0){
                 index = (index+1)%8;
+                
             }
             if(type == 1){
                 index = (index+1)%7;
@@ -56,18 +58,25 @@ public class ArrowScript : MonoBehaviour
         else{
             if(type == 0){
                 index = (index-1)%8;
+                if(index < 0) { index = 7; }
             }
             if(type == 1){
                 index = (index-1)%7;
+                if (index < 0) { index = 6; }
             }
             if(type == 2){
                 index = (index-1)%6;
+                if (index < 0) { index = 5; }
             }
             if(type == 3){
                 index = (index-1)%13;
+                if (index < 0) { index = 12; }
             }
         }
+
+
         OtherScript.index = index;
+        Ascript.ChangeAvatar(type, index);
     }
 
 

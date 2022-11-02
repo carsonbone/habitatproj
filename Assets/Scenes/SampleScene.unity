@@ -1014,7 +1014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &418364715
 Transform:
   m_ObjectHideFlags: 0
@@ -2331,6 +2331,12 @@ MonoBehaviour:
   - {fileID: 1000011542734696, guid: 1f2bcd34ee5592249ba59b667f06989d, type: 3}
   - {fileID: 1000010152734680, guid: 2741d1b70a3347f4ab503ddde0ec605d, type: 3}
   - {fileID: 1000014201301548, guid: 31d4d8b8dfdb32d4096e1e1c75567aa7, type: 3}
+  joystick: {fileID: 0}
+  CharArray: 
+  BaseChoice: 0
+  EyeChoice: 0
+  OutfitChoice: 0
+  HairChoice: 0
 --- !u!1 &1768243729
 GameObject:
   m_ObjectHideFlags: 0

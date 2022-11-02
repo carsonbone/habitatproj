@@ -17,6 +17,8 @@ public class AvatarScript : MonoBehaviour
     public int    EyeChoice;
     public int    OutfitChoice;
     public int    HairChoice;
+
+    public Joystick joystick;
     // Start is called before the first frame update
     void Awake()
     {
@@ -55,6 +57,7 @@ public class AvatarScript : MonoBehaviour
 
     public void ChangeAvatar(int type, int index){
 
+        Debug.Log("Trying to change avatar");
         GameObject current = this.gameObject.transform.GetChild(0).gameObject;
 
         Destroy(current);
@@ -68,6 +71,7 @@ public class AvatarScript : MonoBehaviour
         else{base2 = Instantiate(F_bases[BaseChoice],this.gameObject.transform);}
 
         if(type == 1){Instantiate(F_eyes[index], base2.transform);
+            Debug.Log("Trying to change eyes");
         EyeChoice = index;}
         else{Instantiate(F_eyes[EyeChoice], base2.transform);}
 
@@ -79,7 +83,7 @@ public class AvatarScript : MonoBehaviour
        HairChoice = index;}
         else{Instantiate(F_hair[HairChoice], base2.transform);}
 
-        
+        base2.GetComponent<PlayerController2D>().joystick = joystick;
 
 
         //animation idea but it didnt really work so w/e

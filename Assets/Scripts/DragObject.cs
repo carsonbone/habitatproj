@@ -53,8 +53,19 @@ public class DragObject : MonoBehaviour
                     List<RaycastResult> results = new List<RaycastResult>();
                     EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
 
+                    
                     if(results.Count > 0)
                     {
+                        if (results[0].gameObject.CompareTag("UIArrow"))
+                        {
+                            results[0].gameObject.GetComponent<ArrowScript>().Pressed();
+                            Debug.Log("arrow press");
+                        }
+                        if (results[1].gameObject.CompareTag("UIArrow"))
+                        {
+                            results[1].gameObject.GetComponent<ArrowScript>().Pressed();
+                            Debug.Log("arrow press");
+                        }
                         if (results[0].gameObject.CompareTag("UIButton"))
                         {
                             Debug.Log("touching UI button");
