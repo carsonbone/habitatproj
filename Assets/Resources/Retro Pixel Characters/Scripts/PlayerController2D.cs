@@ -124,4 +124,8 @@ public class PlayerController2D : MonoBehaviour {
 			}
 		}
 	}
+
+	public void BeHappy(){
+		anim.SetBool("isHappy",true);
+	}
 }
