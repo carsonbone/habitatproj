@@ -56,14 +56,14 @@ public class DragObject : MonoBehaviour
                     
                     if(results.Count > 0)
                     {
+                        if (results[0].gameObject.CompareTag("SceneDone"))
+                        {
+                            results[0].gameObject.GetComponent<SceneSwitch>().Switch();
+                            Debug.Log("DragObject is calling switch");
+                        }
                         if (results[0].gameObject.CompareTag("UIArrow"))
                         {
                             results[0].gameObject.GetComponent<ArrowScript>().Pressed();
-                            Debug.Log("arrow press");
-                        }
-                        if (results[1].gameObject.CompareTag("UIArrow"))
-                        {
-                            results[1].gameObject.GetComponent<ArrowScript>().Pressed();
                             Debug.Log("arrow press");
                         }
                         if (results[0].gameObject.CompareTag("UIButton"))
