@@ -13,10 +13,10 @@ public class AvatarScript : MonoBehaviour
 
     public int[] CharArray;
 
-    public int    BaseChoice;
-    public int    EyeChoice;
-    public int    OutfitChoice;
-    public int    HairChoice;
+    public  int    BaseChoice;
+    public  int    EyeChoice;
+    public  int    OutfitChoice;
+    public  int    HairChoice;
 
     public Joystick joystick;
     // Start is called before the first frame update
@@ -28,10 +28,7 @@ public class AvatarScript : MonoBehaviour
 
         //so this right here vvv is temp
 
-        BaseChoice = 2;
-        EyeChoice = 5;
-        OutfitChoice = 4;
-        HairChoice = 3;
+        
 
         //note: we will also need to store the color of the hair damn whata bummer thats gunna suck
 
