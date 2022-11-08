@@ -49,7 +49,7 @@ public class DragObject : MonoBehaviour
             switch (touch.phase) // the "phase" of the touch, like if it just started, if its ending etc
             {
                 case TouchPhase.Began: //The touch started
-
+                    Debug.Log("Touch Start");
 
                     PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
                     eventDataCurrentPosition.position = new Vector2(touch.position.x, touch.position.y);
@@ -145,7 +145,10 @@ public class DragObject : MonoBehaviour
                             if (JustSpawned == true)
                             {
                                 objcheck = obj;
-                            }
+                                Vector3 touchedPos2 = Camera.main.ScreenToWorldPoint(touch.position);
+                                obj.transform.position = new Vector3(touchedPos2.x, touchedPos2.y, 0);
+
+                        }
 
                         
 
@@ -206,7 +209,7 @@ public class DragObject : MonoBehaviour
                     break;
 
                 case TouchPhase.Moved: //The touch is moving
-
+                    Debug.Log("Touch Move");
                     Vector3 touchedPos = Camera.main.ScreenToWorldPoint(touch.position); //basically the position of our finger
                     //instead of relative to the camera it makes it relative to the game world
 
