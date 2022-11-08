@@ -8,6 +8,7 @@ public class GridManager : MonoBehaviour
     //A placeholder script that will hold info about the grid, not currently being used
 {
     private AndroidJavaObject activity;
+    public GameObject Container;
     public GameObject waterTilePrefab;
     public GameObject groundTilePrefab;
     public GameObject groundGrid;
@@ -20,6 +21,7 @@ public class GridManager : MonoBehaviour
     public int[,] grid;
     public int[,] rotationGrid;
     public string[,] furnitureGrid;
+    private AddToMenu menuScript;
     private int columns = 50;
     private int rows = 50;
 
@@ -27,7 +29,7 @@ public class GridManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        menuScript = Container.GetComponent<AddToMenu>();
         //This block is for when it's connected to the android app
         /*AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -86,6 +88,7 @@ public class GridManager : MonoBehaviour
                 } //Add the rest of the furniture here
             } 
         }
+        menuScript.addToMenu("fountain");
     }
 
     private void SavePositions(){
@@ -107,6 +110,7 @@ public class GridManager : MonoBehaviour
             }
             furnitureInformation = furnitureInformation + (furniture.transform.rotation.eulerAngles.z/90) + ",";
         }
+        furnitureInformation = furnitureInformation + menuScript.returnObjects();
         Debug.Log(furnitureInformation);
         #if UNITY_ANDROID
             activity.CallStatic("savePositions", new object[] {furnitureInformation});
@@ -151,7 +155,7 @@ public class GridManager : MonoBehaviour
                     furnitureGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = splitValues[2];
                     rotationGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = Int32.Parse(splitValues[3]);
                 } else {
-                    //Code here for adding to menu
+                    menuScript.addToMenu(splitValues[2]);
                 }
             }
         }

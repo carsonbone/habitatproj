@@ -11,6 +11,7 @@ public class DragObject : MonoBehaviour
     private GameObject obj; //the object we are touching
     private Color objcolor; //the color of the object we are touching
     public GameObject handler;
+    public GameObject Container;
     public GameObject testDelete;
     public GameObject testRotate;
     public Grid grid; //the game grid layout
@@ -22,6 +23,7 @@ public class DragObject : MonoBehaviour
     private GameObject spawnedObj; //the new prefab that's been spawned
     private bool JustSpawned;
     private UIObject uiscript;
+    private AddToMenu menuScript;
 
 
     private bool validCheck;
@@ -29,6 +31,7 @@ public class DragObject : MonoBehaviour
    
     void Start()
     {
+        menuScript = Container.GetComponent<AddToMenu>();
         JustSpawned = false;
         validCheck = true;
     }
@@ -119,6 +122,7 @@ public class DragObject : MonoBehaviour
                         spawnedObj = uiscript.GiveObj();
                         obj = spawnedObj;
                         tempObj.GetComponent<Image>().color = Color.white;
+                        Destroy(tempObj);
                         tempObj = null;
                         uiscript = null;
                     }
@@ -176,6 +180,15 @@ public class DragObject : MonoBehaviour
 
                         }
                         if(objcheck.name == "DeleteButton"){
+                            if(deleteButton.transform.parent.name.Equals("testskull(Clone)")){
+                                menuScript.addToMenu("skull");
+                            } else if(deleteButton.transform.parent.name.Equals("TestFountain(Clone)")){
+                                menuScript.addToMenu("fountain");
+                            } else if(deleteButton.transform.parent.name.Equals("testdoor(Clone)")){
+                                menuScript.addToMenu("door");
+                            } else if(deleteButton.transform.parent.name.Equals("testBench(Clone)")){
+                                menuScript.addToMenu("bench");
+                            }
                             Destroy(deleteButton.transform.parent.gameObject);
                         }
                         if(objcheck.name == "RotateButton"){
