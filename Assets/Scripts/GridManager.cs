@@ -75,6 +75,7 @@ public class GridManager : MonoBehaviour
         rotationGrid[20,30] = 3;
         furnitureGrid[30,20] = "door";
         rotationGrid[30,20] = 1;
+        spawnFurniture("25 25 fountain 0,null null skull null");
         for(int i = 0; i < columns; i ++){
             for(int j = 0; j < rows; j ++){
                 if(furnitureGrid[i,j].Equals("skull")){
@@ -135,6 +136,7 @@ public class GridManager : MonoBehaviour
                 spawnTile(i, j);
             } 
         }
+        
          activity.CallStatic("mapSpawned", new object[] {"Map Spawned"});
     }
 
@@ -149,14 +151,17 @@ public class GridManager : MonoBehaviour
             } 
         }
         for(int i = 0; i < splitGridValues.Length; i++){
+            Debug.Log(splitGridValues[i]);
             string[] splitValues = splitGridValues[i].Split(" ");
-            for(int j = 0; j < splitValues.Length; j++){
-                if(!splitValues[0].Equals("null") && !splitValues[1].Equals("null")){
-                    furnitureGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = splitValues[2];
-                    rotationGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = Int32.Parse(splitValues[3]);
-                } else {
-                    menuScript.addToMenu(splitValues[2]);
-                }
+            Debug.Log(splitValues[0]);
+            Debug.Log(splitValues[1]);
+            Debug.Log(splitValues[2]);
+            Debug.Log(splitValues[3]);
+            if(!splitValues[0].Equals("null") && !splitValues[1].Equals("null")){
+                furnitureGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = splitValues[2];
+                rotationGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = Int32.Parse(splitValues[3]);
+            } else {
+                menuScript.addToMenu(splitValues[2]);
             }
         }
         for(int i = 0; i < columns; i ++){
