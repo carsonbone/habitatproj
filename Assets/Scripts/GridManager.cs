@@ -31,65 +31,65 @@ public class GridManager : MonoBehaviour
     {
         menuScript = Container.GetComponent<AddToMenu>();
         //This block is for when it's connected to the android app
-        /*AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         InvokeRepeating("SavePositions", 15.0f, 15.0f);
         #if UNITY_ANDROID
             activity.CallStatic("unityReady", new object[] {"Unity Ready"});
-        #endif*/
+        #endif
 
         //This block is specifically for testing without android input, activate if not connected to the app
-        grid = new int[columns, rows];
-        for(int i = 0; i < columns; i ++){
-            for(int j = 0; j < rows; j ++){
-                if(i >= 15 && j >= 15 && i <= 34 && j <= 34){
-                    grid[i,j] = 1;
-                } else{
-                    grid[i,j] = 0;
-                }
+        // grid = new int[columns, rows];
+        // for(int i = 0; i < columns; i ++){
+        //     for(int j = 0; j < rows; j ++){
+        //         if(i >= 15 && j >= 15 && i <= 34 && j <= 34){
+        //             grid[i,j] = 1;
+        //         } else{
+        //             grid[i,j] = 0;
+        //         }
                 
-            } 
-        }
-        InvokeRepeating("SavePositions", 15.0f, 15.0f);
-        for(int i = 0; i < columns; i ++){
-            for(int j = 0; j < rows; j ++){
-                if(i > 0 && j > 0 && i < (rows - 1) && j < (columns - 1) && grid[i,j] > 0){
-                    grid[i,j] = IsEdge(i,j);
-                } 
-                spawnTile(i, j);
-            } 
-        } 
-        furnitureGrid = new string[columns, rows];
-        rotationGrid = new int[columns, rows];
-        for(int i = 0; i < columns; i ++){
-            for(int j = 0; j < rows; j ++){
-                furnitureGrid[i,j] = " ";
-                rotationGrid[i,j] = 0;
-            } 
-        }
-        furnitureGrid[20,20] = "skull";
-        rotationGrid[20,20] = 2;
-        furnitureGrid[30,30] = "fountain";
-        rotationGrid[30,30] = 0;
-        furnitureGrid[20,30] = "bench";
-        rotationGrid[20,30] = 3;
-        furnitureGrid[30,20] = "door";
-        rotationGrid[30,20] = 1;
-        spawnFurniture("25 25 fountain 0,null null skull null");
-        for(int i = 0; i < columns; i ++){
-            for(int j = 0; j < rows; j ++){
-                if(furnitureGrid[i,j].Equals("skull")){
-                    Instantiate(testSkull, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
-                } else if(furnitureGrid[i,j].Equals("fountain")){
-                    Instantiate(testFountain, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
-                } else if(furnitureGrid[i,j].Equals("bench")){
-                    Instantiate(testBench, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
-                } else if(furnitureGrid[i,j].Equals("door")){
-                    Instantiate(testDoor, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
-                } //Add the rest of the furniture here
-            } 
-        }
-        menuScript.addToMenu("fountain");
+        //     } 
+        // }
+        // InvokeRepeating("SavePositions", 15.0f, 15.0f);
+        // for(int i = 0; i < columns; i ++){
+        //     for(int j = 0; j < rows; j ++){
+        //         if(i > 0 && j > 0 && i < (rows - 1) && j < (columns - 1) && grid[i,j] > 0){
+        //             grid[i,j] = IsEdge(i,j);
+        //         } 
+        //         spawnTile(i, j);
+        //     } 
+        // } 
+        // furnitureGrid = new string[columns, rows];
+        // rotationGrid = new int[columns, rows];
+        // for(int i = 0; i < columns; i ++){
+        //     for(int j = 0; j < rows; j ++){
+        //         furnitureGrid[i,j] = " ";
+        //         rotationGrid[i,j] = 0;
+        //     } 
+        // }
+        // furnitureGrid[20,20] = "skull";
+        // rotationGrid[20,20] = 2;
+        // furnitureGrid[30,30] = "fountain";
+        // rotationGrid[30,30] = 0;
+        // furnitureGrid[20,30] = "bench";
+        // rotationGrid[20,30] = 3;
+        // furnitureGrid[30,20] = "door";
+        // rotationGrid[30,20] = 1;
+        // spawnFurniture("25 25 fountain 0,null null skull null");
+        // for(int i = 0; i < columns; i ++){
+        //     for(int j = 0; j < rows; j ++){
+        //         if(furnitureGrid[i,j].Equals("skull")){
+        //             Instantiate(testSkull, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        //         } else if(furnitureGrid[i,j].Equals("fountain")){
+        //             Instantiate(testFountain, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        //         } else if(furnitureGrid[i,j].Equals("bench")){
+        //             Instantiate(testBench, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        //         } else if(furnitureGrid[i,j].Equals("door")){
+        //             Instantiate(testDoor, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        //         } //Add the rest of the furniture here
+        //     } 
+        // }
+        // menuScript.addToMenu("fountain");
     }
 
     private void SavePositions(){
