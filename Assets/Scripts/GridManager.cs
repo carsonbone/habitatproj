@@ -34,6 +34,7 @@ public class GridManager : MonoBehaviour
     {
         menuScript = Container.GetComponent<AddToMenu>();
         //This block is for when it's connected to the android app
+        
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         InvokeRepeating("SavePositions", 15.0f, 15.0f);
@@ -41,6 +42,7 @@ public class GridManager : MonoBehaviour
 #if UNITY_ANDROID
             activity.CallStatic("unityReady", new object[] {"Unity Ready"});
 #endif
+
 
         //This block is specifically for testing without android input, activate if not connected to the app
         // grid = new int[columns, rows];
@@ -94,6 +96,9 @@ public class GridManager : MonoBehaviour
         //     } 
         // }
         // menuScript.addToMenu("fountain");
+
+
+       // SpawnAvatar("0 0 0 0 0");
     }
     
     private void SavePositions(){
@@ -124,12 +129,16 @@ public class GridManager : MonoBehaviour
     public void SpawnAvatar(string avaValues)
     {
         string[] splitAvaValues = avaValues.Split(" ");
+        Debug.Log(splitAvaValues);
         int[] returnValues = new int[splitAvaValues.Length];
+
         for(int i= 0; i < splitAvaValues.Length; i++)
         {
             returnValues[i] = Int32.Parse(splitAvaValues[i]);
         }
+        Debug.Log(returnValues[0]);
         avaScript.updateValues(returnValues);
+        
         avaScript.spawn();
     }
     public void SaveAvatar()

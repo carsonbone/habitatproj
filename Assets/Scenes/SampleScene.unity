@@ -1613,6 +1613,7 @@ MonoBehaviour:
     type: 3}
   testFountain: {fileID: 5382865152933451054, guid: 5de0ee74f8ced1d4ca40ea009c3b2582,
     type: 3}
+  avaScript: {fileID: 1744014735}
   sprites:
   - {fileID: 5927350949019876849, guid: 7ef181ba9960ad14b976972914b22408, type: 3}
   - {fileID: -2671460228953875570, guid: 7ef181ba9960ad14b976972914b22408, type: 3}

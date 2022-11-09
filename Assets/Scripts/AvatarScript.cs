@@ -79,11 +79,14 @@ public class AvatarScript : MonoBehaviour
 
     public void updateValues(int[] temp)
     {
+        CharArray = new int[5];
+        Debug.Log(temp[0]);
         CharArray[0] = temp[0];
         CharArray[1] = temp[1];
         CharArray[2] = temp[2];
         CharArray[3] = temp[3];
         CharArray[4] = temp[4];
+        Debug.Log(CharArray);
     }
     // a function used by the character creator scene
     public void spawn()
