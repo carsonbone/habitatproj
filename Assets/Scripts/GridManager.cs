@@ -258,12 +258,12 @@ public class GridManager : MonoBehaviour
     return 1;
     }
 
-    public void reloadTest()
+    public void reloadTest(string temp)
     {
         Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name); 
     }
-    public void quitTest()
+    public void quitTest(string temp)
     {
         Application.Quit();
     }
