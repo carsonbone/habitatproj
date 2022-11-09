@@ -11,7 +11,7 @@ public class AvatarScript : MonoBehaviour
     public GameObject[] F_hair;
 
 
-    public int[] CharArray;
+    public  static int[] CharArray;
 
     public  int    BaseChoice;
     public  int    EyeChoice;
@@ -27,8 +27,21 @@ public class AvatarScript : MonoBehaviour
         //Here we will plug in the values from the app, which stores the avatar array
 
         //so this right here vvv is temp
-
         
+        if(CharArray == null || CharArray.Length == 0)
+        {
+            CharArray = new int[] { 0, 0, 0, 0 };
+            CharArray[0] = 0;
+            CharArray[1] = 0;
+            CharArray[2] = 0;
+            CharArray[3] = 0;
+        }
+
+        BaseChoice = CharArray[0];
+        EyeChoice = CharArray[1];
+        OutfitChoice = CharArray[2];
+        HairChoice = CharArray[3];
+
 
         //note: we will also need to store the color of the hair damn whata bummer thats gunna suck
 
@@ -64,23 +77,33 @@ public class AvatarScript : MonoBehaviour
 
         GameObject base2 = null;
         if(type == 0){base2 = Instantiate(F_bases[index],this.gameObject.transform);
-        BaseChoice = index;}
+        BaseChoice = index;
+        CharArray[0] = index;
+        }
         else{base2 = Instantiate(F_bases[BaseChoice],this.gameObject.transform);}
 
         if(type == 1){Instantiate(F_eyes[index], base2.transform);
             Debug.Log("Trying to change eyes");
-        EyeChoice = index;}
+        EyeChoice = index;
+            CharArray[1] = index;
+        }
         else{Instantiate(F_eyes[EyeChoice], base2.transform);}
 
         if(type == 2){Instantiate(F_outfits[index], base2.transform);
-        OutfitChoice = index;}
+        OutfitChoice = index;
+            CharArray[2] = index;
+        }
         else{Instantiate(F_outfits[OutfitChoice], base2.transform);}
 
        if(type == 3){Instantiate(F_hair[index], base2.transform);
-       HairChoice = index;}
+       HairChoice = index;
+            CharArray[3] = index;
+        }
         else{Instantiate(F_hair[HairChoice], base2.transform);}
 
         base2.GetComponent<PlayerController2D>().joystick = joystick;
+
+
 
 
         //animation idea but it didnt really work so w/e
