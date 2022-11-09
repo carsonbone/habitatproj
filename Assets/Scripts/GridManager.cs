@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class GridManager : MonoBehaviour
     //A placeholder script that will hold info about the grid, not currently being used
@@ -17,6 +18,8 @@ public class GridManager : MonoBehaviour
     public GameObject testBench;
     public GameObject testDoor;
     public GameObject testFountain;
+
+    public AvatarScript avaScript;
     public Sprite[] sprites;
     public int[,] grid;
     public int[,] rotationGrid;
@@ -34,9 +37,10 @@ public class GridManager : MonoBehaviour
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         InvokeRepeating("SavePositions", 15.0f, 15.0f);
-        #if UNITY_ANDROID
+        InvokeRepeating("SaveAvatar", 15.0f, 15.0f);
+#if UNITY_ANDROID
             activity.CallStatic("unityReady", new object[] {"Unity Ready"});
-        #endif
+#endif
 
         //This block is specifically for testing without android input, activate if not connected to the app
         // grid = new int[columns, rows];
@@ -47,7 +51,7 @@ public class GridManager : MonoBehaviour
         //         } else{
         //             grid[i,j] = 0;
         //         }
-                
+
         //     } 
         // }
         // InvokeRepeating("SavePositions", 15.0f, 15.0f);
@@ -91,7 +95,7 @@ public class GridManager : MonoBehaviour
         // }
         // menuScript.addToMenu("fountain");
     }
-
+    
     private void SavePositions(){
         var furnitureList = GameObject.FindGameObjectsWithTag("PlaceableObject");
         string furnitureInformation = "";
@@ -117,7 +121,33 @@ public class GridManager : MonoBehaviour
             activity.CallStatic("savePositions", new object[] {furnitureInformation});
         #endif
     }
+    public void SpawnAvatar(string avaValues)
+    {
+        string[] splitAvaValues = avaValues.Split(" ");
+        int[] returnValues = new int[splitAvaValues.Length];
+        for(int i= 0; i < splitAvaValues.Length; i++)
+        {
+            returnValues[i] = Int32.Parse(splitAvaValues[i]);
+        }
+        avaScript.updateValues(returnValues);
+        avaScript.spawn();
+    }
+    public void SaveAvatar()
+    {
+        int[] temp = AvatarScript.CharArray;
+        string avaInfo = "";
 
+        for( int i = 0; i < temp.Length; i++)
+        {
+            avaInfo = avaInfo + temp[i].ToString() + " ";
+        }
+
+        #if UNITY_ANDROID
+            activity.CallStatic("saveAvatar", new object[] {avaInfo});
+        #endif 
+
+
+    }
     public void spawnMap(string gridValues){
 
         grid = new int[columns, rows];
@@ -177,6 +207,7 @@ public class GridManager : MonoBehaviour
                 } //Add the rest of the furniture here
             } 
         }
+        activity.CallStatic("furnitureSpawned", new object[] { "Furniture Spawned" });
     }
 
     // Update is called once per frame
@@ -225,5 +256,11 @@ public class GridManager : MonoBehaviour
             return 13;
         }
     return 1;
+    }
+
+    void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus) { Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name); }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AvatarScript : MonoBehaviour
 {
@@ -38,27 +39,32 @@ public class AvatarScript : MonoBehaviour
        //     new Color[] { Color.Red, Color.Blue, Color.Green, Color.Purple, Color.Black, Color.Aqua }
         //};
 
-        if (CharArray == null || CharArray.Length == 0)
+
+        if(SceneManager.GetActiveScene().name == "CharCreateScene")
         {
-            CharArray = new int[] { 0, 0, 0, 0,0 };
+            if (CharArray == null || CharArray.Length == 0)
+            {
+                CharArray = new int[] { 0, 0, 0, 0, 0 };
+            }
+
+            BaseChoice = CharArray[0];
+            EyeChoice = CharArray[1];
+            OutfitChoice = CharArray[2];
+            HairChoice = CharArray[3];
+            HairColor = CharArray[4];
+
+
+            //note: we will also need to store the color of the hair damn whata bummer thats gunna suck
+
+
+            GameObject base1 = Instantiate(F_bases[BaseChoice], this.gameObject.transform);
+
+            Instantiate(F_eyes[EyeChoice], base1.transform);
+            Instantiate(F_outfits[OutfitChoice], base1.transform);
+            GameObject temphair = Instantiate(F_hair[HairChoice], base1.transform);
+            temphair.GetComponent<SpriteRenderer>().color = colors[HairColor];
         }
-
-        BaseChoice = CharArray[0];
-        EyeChoice = CharArray[1];
-        OutfitChoice = CharArray[2];
-        HairChoice = CharArray[3];
-        HairColor = CharArray[4];
-
-
-        //note: we will also need to store the color of the hair damn whata bummer thats gunna suck
-
-
-        GameObject base1 = Instantiate(F_bases[BaseChoice],this.gameObject.transform);
-
-        Instantiate(F_eyes[EyeChoice], base1.transform);
-        Instantiate(F_outfits[OutfitChoice], base1.transform);
-        GameObject temphair = Instantiate(F_hair[HairChoice], base1.transform);
-        temphair.GetComponent<SpriteRenderer>().color = colors[HairColor];
+        
 
 
 
@@ -71,8 +77,36 @@ public class AvatarScript : MonoBehaviour
         
     }
 
+    public void updateValues(int[] temp)
+    {
+        CharArray[0] = temp[0];
+        CharArray[1] = temp[1];
+        CharArray[2] = temp[2];
+        CharArray[3] = temp[3];
+        CharArray[4] = temp[4];
+    }
     // a function used by the character creator scene
+    public void spawn()
+    {
+        if (CharArray == null || CharArray.Length == 0)
+        {
+            CharArray = new int[] { 0, 0, 0, 0, 0 };
+        }
 
+        BaseChoice = CharArray[0];
+        EyeChoice = CharArray[1];
+        OutfitChoice = CharArray[2];
+        HairChoice = CharArray[3];
+        HairColor = CharArray[4];
+
+        GameObject base1 = Instantiate(F_bases[BaseChoice], this.gameObject.transform);
+
+        Instantiate(F_eyes[EyeChoice], base1.transform);
+        Instantiate(F_outfits[OutfitChoice], base1.transform);
+        GameObject temphair = Instantiate(F_hair[HairChoice], base1.transform);
+        temphair.GetComponent<SpriteRenderer>().color = colors[HairColor];
+
+    }
     public void ChangeAvatar(int type, int index){
 
         Debug.Log("Trying to change avatar");
