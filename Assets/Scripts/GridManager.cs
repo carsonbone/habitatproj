@@ -258,9 +258,13 @@ public class GridManager : MonoBehaviour
     return 1;
     }
 
-    void OnApplicationFocus(bool hasFocus)
+    public void reloadTest()
     {
-        if (hasFocus) { Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name); }
+        Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name); 
+    }
+    public void quitTest()
+    {
+        Application.Quit();
     }
 }
