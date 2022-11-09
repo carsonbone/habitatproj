@@ -551,6 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d7bf15ddb0f984b952cfe83de42887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPlace: 1
   handler: {fileID: 0}
   Container: {fileID: 0}
   testDelete: {fileID: 0}
