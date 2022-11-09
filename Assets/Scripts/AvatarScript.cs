@@ -10,6 +10,7 @@ public class AvatarScript : MonoBehaviour
     public GameObject[] F_outfits;
     public GameObject[] F_hair;
 
+    public Color[] colors;
 
     public  static int[] CharArray;
 
@@ -17,6 +18,9 @@ public class AvatarScript : MonoBehaviour
     public  int    EyeChoice;
     public  int    OutfitChoice;
     public  int    HairChoice;
+    public int HairColor;
+
+   // public ArrayList Arraylistcolors;
 
     public Joystick joystick;
     // Start is called before the first frame update
@@ -27,20 +31,23 @@ public class AvatarScript : MonoBehaviour
         //Here we will plug in the values from the app, which stores the avatar array
 
         //so this right here vvv is temp
-        
-        if(CharArray == null || CharArray.Length == 0)
+
+   //     Arraylistcolors = new ArrayList()
+
+     //   {
+       //     new Color[] { Color.Red, Color.Blue, Color.Green, Color.Purple, Color.Black, Color.Aqua }
+        //};
+
+        if (CharArray == null || CharArray.Length == 0)
         {
-            CharArray = new int[] { 0, 0, 0, 0 };
-            CharArray[0] = 0;
-            CharArray[1] = 0;
-            CharArray[2] = 0;
-            CharArray[3] = 0;
+            CharArray = new int[] { 0, 0, 0, 0,0 };
         }
 
         BaseChoice = CharArray[0];
         EyeChoice = CharArray[1];
         OutfitChoice = CharArray[2];
         HairChoice = CharArray[3];
+        HairColor = CharArray[4];
 
 
         //note: we will also need to store the color of the hair damn whata bummer thats gunna suck
@@ -50,7 +57,8 @@ public class AvatarScript : MonoBehaviour
 
         Instantiate(F_eyes[EyeChoice], base1.transform);
         Instantiate(F_outfits[OutfitChoice], base1.transform);
-        Instantiate(F_hair[HairChoice], base1.transform);
+        GameObject temphair = Instantiate(F_hair[HairChoice], base1.transform);
+        temphair.GetComponent<SpriteRenderer>().color = colors[HairColor];
 
 
 
@@ -73,9 +81,10 @@ public class AvatarScript : MonoBehaviour
         Destroy(current);
 
 
-        //for type, 0=base, 1=eyes, 2=outfit, 3=hair
+        //for type, 0=base, 1=eyes, 2=outfit, 3=hair , 4 = hair color
 
         GameObject base2 = null;
+        GameObject hairbase = null;
         if(type == 0){base2 = Instantiate(F_bases[index],this.gameObject.transform);
         BaseChoice = index;
         CharArray[0] = index;
@@ -95,11 +104,19 @@ public class AvatarScript : MonoBehaviour
         }
         else{Instantiate(F_outfits[OutfitChoice], base2.transform);}
 
-       if(type == 3){Instantiate(F_hair[index], base2.transform);
+       if(type == 3){hairbase = Instantiate(F_hair[index], base2.transform);
        HairChoice = index;
             CharArray[3] = index;
         }
-        else{Instantiate(F_hair[HairChoice], base2.transform);}
+        else{hairbase = Instantiate(F_hair[HairChoice], base2.transform);}
+
+       if(type == 4)
+        {
+            hairbase.GetComponent<SpriteRenderer>().color = colors[index];
+            HairColor = index;
+            CharArray[4] = index;
+        }
+        else { hairbase.GetComponent<SpriteRenderer>().color = colors[HairColor]; }
 
         base2.GetComponent<PlayerController2D>().joystick = joystick;
 

@@ -29,6 +29,10 @@ public class ArrowScript : MonoBehaviour
             if(type == 3){
                 index = Ascript.HairChoice;
             }
+            if(type == 4)
+            {
+                index = Ascript.HairColor;
+            }
     }
 
     // Update is called once per frame
@@ -54,6 +58,10 @@ public class ArrowScript : MonoBehaviour
             if(type == 3){
                 index = (index+1)%13;
             }
+            if(type == 4)
+            {
+                index = (index + 1) % 13;
+            }
         }
         else{
             if(type == 0){
@@ -69,6 +77,10 @@ public class ArrowScript : MonoBehaviour
                 if (index < 0) { index = 5; }
             }
             if(type == 3){
+                index = (index-1)%13;
+                if (index < 0) { index = 12; }
+            }
+            if (type == 4){
                 index = (index-1)%13;
                 if (index < 0) { index = 12; }
             }
