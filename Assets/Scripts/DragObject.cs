@@ -8,6 +8,10 @@ public class DragObject : MonoBehaviour
 {
 
 
+    public bool myPlace;
+
+    //if true, this is our place and we can touch stuff
+
     private GameObject obj; //the object we are touching
     private Color objcolor; //the color of the object we are touching
     public GameObject handler;
@@ -34,6 +38,7 @@ public class DragObject : MonoBehaviour
         menuScript = Container.GetComponent<AddToMenu>();
         JustSpawned = false;
         validCheck = true;
+        myPlace = true;
     }
 
     // Update is called once per frame
@@ -42,7 +47,7 @@ public class DragObject : MonoBehaviour
         
 
 
-        if(Input.touchCount > 0) //where 0 means no fingers on the phone, 1 means one finger etc
+        if(Input.touchCount > 0 && myPlace) //where 0 means no fingers on the phone, 1 means one finger etc
         {
             Touch touch = Input.GetTouch(0); // the touch input being made, specifically the most recent one
 
