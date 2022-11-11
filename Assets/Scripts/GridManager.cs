@@ -25,6 +25,7 @@ public class GridManager : MonoBehaviour
     private AddToMenu menuScript;
     private int columns = 50;
     private int rows = 50;
+    public AvatarScript avaScript;
 
     private Tile[] tileArray;
     // Start is called before the first frame update
@@ -34,10 +35,11 @@ public class GridManager : MonoBehaviour
         //This block is for when it's connected to the android app
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-        InvokeRepeating("SavePositions", 15.0f, 15.0f);
-        #if UNITY_ANDROID
+        InvokeRepeating("SavePositions", 5.0f, 5.0f);
+        InvokeRepeating("SaveAvatar", 5.0f, 5.0f);
+#if UNITY_ANDROID
             activity.CallStatic("unityReady", new object[] {"Unity Ready"});
-        #endif
+#endif
 
         //This block is specifically for testing without android input, activate if not connected to the app
         // grid = new int[columns, rows];
@@ -48,7 +50,7 @@ public class GridManager : MonoBehaviour
         //         } else{
         //             grid[i,j] = 0;
         //         }
-                
+
         //     } 
         // }
         // InvokeRepeating("SavePositions", 15.0f, 15.0f);
@@ -92,7 +94,34 @@ public class GridManager : MonoBehaviour
         // }
         // menuScript.addToMenu("fountain");
     }
+    public void SpawnAvatar(string input)
+    {
+        string[] splitAvaValues = input.Split(" ");
 
+        AvatarScript.CharArray[0] = Int32.Parse(splitAvaValues[0]);
+        AvatarScript.CharArray[1] = Int32.Parse(splitAvaValues[1]);
+        AvatarScript.CharArray[2] = Int32.Parse(splitAvaValues[2]);
+        AvatarScript.CharArray[3] = Int32.Parse(splitAvaValues[3]);
+        AvatarScript.CharArray[4] = Int32.Parse(splitAvaValues[4]);
+
+        avaScript.SetAvatar();
+
+    }
+
+    private void SaveAvatar()
+    {
+        int temp0 = AvatarScript.CharArray[0];
+        int temp1 = AvatarScript.CharArray[1];
+        int temp2 = AvatarScript.CharArray[2];
+        int temp3 = AvatarScript.CharArray[3];
+        int temp4 = AvatarScript.CharArray[4];
+
+        string avaInfo = "";
+        avaInfo = temp0 + " " + temp1 + " " + temp2 + " " + temp3 + " " + temp4 + ",";
+    #if UNITY_ANDROID
+                activity.CallStatic("saveAvatar", new object[] {avaInfo});
+    #endif
+    }
     private void SavePositions(){
         var furnitureList = GameObject.FindGameObjectsWithTag("PlaceableObject");
         string furnitureInformation = "";
@@ -178,6 +207,7 @@ public class GridManager : MonoBehaviour
                 } //Add the rest of the furniture here
             } 
         }
+        activity.CallStatic("furnitureSpawned", new object[] { "Furniture Spawned" });
     }
 
     // Update is called once per frame
@@ -204,6 +234,7 @@ public class GridManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
+    
     private int IsEdge(int x, int y){
         Debug.Log(grid[x + 1,y] == 0 && grid[x,y+1] > 0 && grid[x-1, y] > 0 && grid[x,y-1] > 0);
         if(grid[x + 1,y] > 0 && grid[x,y+1] > 0 && grid[x-1, y] > 0 && grid[x,y-1] > 0 && grid[x + 1,y + 1] > 0 && grid[x - 1,y - 1] > 0 && grid[x-1, y+1] > 0 && grid[x + 1,y-1] > 0){

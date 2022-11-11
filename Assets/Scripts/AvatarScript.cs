@@ -18,7 +18,7 @@ public class AvatarScript : MonoBehaviour
     public  int    EyeChoice;
     public  int    OutfitChoice;
     public  int    HairChoice;
-    public int HairColor;
+    public  int    HairColor;
 
    // public ArrayList Arraylistcolors;
 
@@ -72,7 +72,24 @@ public class AvatarScript : MonoBehaviour
     }
 
     // a function used by the character creator scene
+    public void SetAvatar()
+    {
+        GameObject current = this.gameObject.transform.GetChild(0).gameObject;
 
+        Destroy(current);
+
+        BaseChoice = CharArray[0];
+        EyeChoice = CharArray[1];
+        OutfitChoice = CharArray[2];
+        HairChoice = CharArray[3];
+        HairColor = CharArray[4];
+
+        GameObject base1 = Instantiate(F_bases[BaseChoice], this.gameObject.transform);
+        Instantiate(F_eyes[EyeChoice], base1.transform);
+        Instantiate(F_outfits[OutfitChoice], base1.transform);
+        GameObject temphair = Instantiate(F_hair[HairChoice], base1.transform);
+        temphair.GetComponent<SpriteRenderer>().color = colors[HairColor];
+    }
     public void ChangeAvatar(int type, int index){
 
         Debug.Log("Trying to change avatar");
