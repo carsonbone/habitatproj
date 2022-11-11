@@ -120,7 +120,7 @@ public class GridManager : MonoBehaviour
     {
         string[] touchValues = input.Split(",");
 
-        int num1 = touchValues[0];
+       // int num1 = touchValues[0];
     }
     private void SaveAvatar()
     {
