@@ -194,7 +194,15 @@ public class GridManager : MonoBehaviour
         
         
     }
-
+    public void QuitFunction(string temp)
+    {
+        Application.Quit();
+    }
+    public void ReloadFunction(string temp)
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
     private int IsEdge(int x, int y){
         Debug.Log(grid[x + 1,y] == 0 && grid[x,y+1] > 0 && grid[x-1, y] > 0 && grid[x,y-1] > 0);
         if(grid[x + 1,y] > 0 && grid[x,y+1] > 0 && grid[x-1, y] > 0 && grid[x,y-1] > 0 && grid[x + 1,y + 1] > 0 && grid[x - 1,y - 1] > 0 && grid[x-1, y+1] > 0 && grid[x + 1,y-1] > 0){
@@ -226,4 +234,7 @@ public class GridManager : MonoBehaviour
         }
     return 1;
     }
+
+    
+
 }
