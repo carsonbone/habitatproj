@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class GridManager : MonoBehaviour
     //A placeholder script that will hold info about the grid, not currently being used
