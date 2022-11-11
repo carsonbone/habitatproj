@@ -30,7 +30,7 @@ public class DragObject : MonoBehaviour
     private AddToMenu menuScript;
 
 
-    public GridManager gridScript;
+    //public GridManager gridScript;
 
 
     private bool validCheck;
@@ -46,7 +46,7 @@ public class DragObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool myHouse = gridScript.myHouse;
+        //bool myHouse = gridScript.myHouse;
 
 
         if(Input.touchCount > 0 ) //where 0 means no fingers on the phone, 1 means one finger etc
