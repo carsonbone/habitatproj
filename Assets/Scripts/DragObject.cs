@@ -49,7 +49,7 @@ public class DragObject : MonoBehaviour
         bool myHouse = gridScript.myHouse;
 
 
-        if(Input.touchCount > 0 && myHouse) //where 0 means no fingers on the phone, 1 means one finger etc
+        if(Input.touchCount > 0 ) //where 0 means no fingers on the phone, 1 means one finger etc
         {
             Touch touch = Input.GetTouch(0); // the touch input being made, specifically the most recent one
 
