@@ -8,7 +8,7 @@ public class DragObject : MonoBehaviour
 {
 
 
-    public bool myPlace;
+    
 
     //if true, this is our place and we can touch stuff
 
@@ -30,6 +30,9 @@ public class DragObject : MonoBehaviour
     private AddToMenu menuScript;
 
 
+    public GridManager gridScript;
+
+
     private bool validCheck;
     // Start is called before the first frame update
    
@@ -38,16 +41,15 @@ public class DragObject : MonoBehaviour
         menuScript = Container.GetComponent<AddToMenu>();
         JustSpawned = false;
         validCheck = true;
-        myPlace = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        bool myHouse = gridScript.myHouse;
 
 
-        if(Input.touchCount > 0 && myPlace) //where 0 means no fingers on the phone, 1 means one finger etc
+        if(Input.touchCount > 0 && myHouse) //where 0 means no fingers on the phone, 1 means one finger etc
         {
             Touch touch = Input.GetTouch(0); // the touch input being made, specifically the most recent one
 

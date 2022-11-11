@@ -27,10 +27,13 @@ public class GridManager : MonoBehaviour
     private int rows = 50;
     public AvatarScript avaScript;
 
+    public bool myHouse;
+
     private Tile[] tileArray;
     // Start is called before the first frame update
     void Start()
     {
+        
         menuScript = Container.GetComponent<AddToMenu>();
         //This block is for when it's connected to the android app
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
@@ -97,17 +100,28 @@ public class GridManager : MonoBehaviour
     public void SpawnAvatar(string input)
     {
         string[] splitAvaValues = input.Split(" ");
+        if (AvatarScript.avaChanged == false)
+        {
+            AvatarScript.CharArray[0] = Int32.Parse(splitAvaValues[0]);
+            AvatarScript.CharArray[1] = Int32.Parse(splitAvaValues[1]);
+            AvatarScript.CharArray[2] = Int32.Parse(splitAvaValues[2]);
+            AvatarScript.CharArray[3] = Int32.Parse(splitAvaValues[3]);
 
-        AvatarScript.CharArray[0] = Int32.Parse(splitAvaValues[0]);
-        AvatarScript.CharArray[1] = Int32.Parse(splitAvaValues[1]);
-        AvatarScript.CharArray[2] = Int32.Parse(splitAvaValues[2]);
-        AvatarScript.CharArray[3] = Int32.Parse(splitAvaValues[3]);
-        AvatarScript.CharArray[4] = Int32.Parse(splitAvaValues[4]);
+            AvatarScript.CharArray[4] = Int32.Parse(splitAvaValues[4]);
 
-        avaScript.SetAvatar();
+            avaScript.SetAvatar();
+
+            AvatarScript.avaChanged = true;
+
+        }
 
     }
+    public  void CanTouch(string input)
+    {
+        string[] touchValues = input.Split(",");
 
+        int num1 = touchValues[0];
+    }
     private void SaveAvatar()
     {
         int temp0 = AvatarScript.CharArray[0];
@@ -117,7 +131,7 @@ public class GridManager : MonoBehaviour
         int temp4 = AvatarScript.CharArray[4];
 
         string avaInfo = "";
-        avaInfo = temp0 + " " + temp1 + " " + temp2 + " " + temp3 + " " + temp4 + ",";
+        avaInfo = temp0 + " " + temp1 + " " + temp2 + " " + temp3 + " " + temp4;
     #if UNITY_ANDROID
                 activity.CallStatic("saveAvatar", new object[] {avaInfo});
     #endif

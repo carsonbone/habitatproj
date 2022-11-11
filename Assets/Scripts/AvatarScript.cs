@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class AvatarScript : MonoBehaviour
 {
+
+    public static bool avaChanged = false;
 
     public GameObject[] F_bases;
     public GameObject[] F_eyes;
