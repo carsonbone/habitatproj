@@ -44,6 +44,7 @@ public class GridManager : MonoBehaviour
     private int columns = 50;
     private int rows = 50;
     public AvatarScript avaScript;
+    
 
     public bool myHouse;
 
@@ -114,6 +115,17 @@ public class GridManager : MonoBehaviour
         //     } 
         // }
         // menuScript.addToMenu("fountain");
+    }
+    public void IsMyHouse(string input)
+    {
+        if(input.Equals("false"))
+        {
+            DragObject.myHouse = false;
+        }
+        else
+        {
+            DragObject.myHouse = true;
+        }
     }
     public void SpawnAvatar(string input)
     {

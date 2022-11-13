@@ -29,9 +29,9 @@ public class DragObject : MonoBehaviour
     private UIObject uiscript;
     private AddToMenu menuScript;
 
+    public static bool myHouse = true;
 
-    //public GridManager gridScript;
-
+    private bool touchingJoystick;
 
     private bool validCheck;
     // Start is called before the first frame update
@@ -41,13 +41,14 @@ public class DragObject : MonoBehaviour
         menuScript = Container.GetComponent<AddToMenu>();
         JustSpawned = false;
         validCheck = true;
+        myHouse = true;
+        touchingJoystick = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //bool myHouse = gridScript.myHouse;
-
+        touchingJoystick = false;
 
         if(Input.touchCount > 0 ) //where 0 means no fingers on the phone, 1 means one finger etc
         {
@@ -66,6 +67,20 @@ public class DragObject : MonoBehaviour
                     
                     if(results.Count > 0)
                     {
+                        if (results[0].gameObject.name.Equals("Handle"))
+                        {
+                            Debug.Log("touching joystick");
+                            touchingJoystick = true;
+                        }
+                        if(results.Count >= 2)
+                        {
+                            if (results[1].gameObject.name.Equals("Handle"))
+                            {
+                                Debug.Log("touching joystick");
+                                touchingJoystick = true;
+                            }
+
+                        }
                         if (results[0].gameObject.CompareTag("SceneDone"))
                         {
                             results[0].gameObject.GetComponent<SceneSwitch>().Switch();
@@ -134,13 +149,13 @@ public class DragObject : MonoBehaviour
                         uiscript = null;
                     }
 
-                    if (hitInfo || JustSpawned ) //we are touching something, don't know what
+                    if ((hitInfo || JustSpawned )&& !touchingJoystick) //we are touching something, don't know what
                         //OR, we just spawned an object with this touch
 
                     {
                         GameObject objcheck = null;
 
-                        
+                        Debug.Log("Check: " + touchingJoystick);
 
 
                         if (!JustSpawned)//if this object already existed

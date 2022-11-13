@@ -56,7 +56,7 @@ public class ArrowScript : MonoBehaviour
                 index = (index+1)%6;
             }
             if(type == 3){
-                index = (index+1)%13;
+                index = (index+1)%12;
             }
             if(type == 4)
             {
@@ -77,8 +77,8 @@ public class ArrowScript : MonoBehaviour
                 if (index < 0) { index = 5; }
             }
             if(type == 3){
-                index = (index-1)%13;
-                if (index < 0) { index = 12; }
+                index = (index-1)%12;
+                if (index < 0) { index = 11; }
             }
             if (type == 4){
                 index = (index-1)%13;

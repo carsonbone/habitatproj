@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7483658558569928020}
   - component: {fileID: 7321311335396490632}
   m_Layer: 0
-  m_Name: testbench
+  m_Name: testBench
   m_TagString: PlaceableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
