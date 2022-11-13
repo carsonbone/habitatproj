@@ -18,6 +18,24 @@ public class GridManager : MonoBehaviour
     public GameObject testBench;
     public GameObject testDoor;
     public GameObject testFountain;
+    public GameObject bush;
+    public GameObject doghouse;
+    public GameObject fence;
+    public GameObject fern;
+    public GameObject flag;
+    public GameObject fruitbox;
+    public GameObject house;
+    public GameObject log;
+    public GameObject rock;
+    public GameObject sign;
+    public GameObject stand;
+    public GameObject statue;
+    public GameObject stool;
+    public GameObject stump;
+    public GameObject table;
+    public GameObject tombstone;
+    public GameObject tower;
+    public GameObject tree;
     public Sprite[] sprites;
     public int[,] grid;
     public int[,] rotationGrid;
@@ -152,7 +170,43 @@ public class GridManager : MonoBehaviour
                 furnitureInformation = furnitureInformation + "bench" + " ";
             } else if(furniture.name.Equals("TestFountain(Clone)")){
                 furnitureInformation = furnitureInformation + "fountain" + " ";
-            }
+            } else if(furniture.name.Equals("Bush(Clone)")){
+            furnitureInformation = furnitureInformation + "bush" + " ";
+        } else if(furniture.name.Equals("DogHouse(Clone)")){
+            furnitureInformation = furnitureInformation + "doghouse" + " ";
+        } else if(furniture.name.Equals("Fence(Clone)")){
+            furnitureInformation = furnitureInformation + "fence" + " ";
+        } else if(furniture.name.Equals("Fern(Clone)")){
+            furnitureInformation = furnitureInformation + "fern" + " ";
+        } else if(furniture.name.Equals("Flag(Clone)")){
+            furnitureInformation = furnitureInformation + "flag" + " ";
+        } else if(furniture.name.Equals("FruitBox(Clone)")){
+            furnitureInformation = furnitureInformation + "fruitbox" + " ";
+        }  else if(furniture.name.Equals("House(Clone)")){
+            furnitureInformation = furnitureInformation + "house" + " ";
+        } else if(furniture.name.Equals("Log(Clone)")){
+            furnitureInformation = furnitureInformation + "log" + " ";
+        } else if(furniture.name.Equals("Rock(Clone)")){
+            furnitureInformation = furnitureInformation + "rock" + " ";
+        }  else if(furniture.name.Equals("Sign(Clone)")){
+            furnitureInformation = furnitureInformation + "sign" + " ";
+        } else if(furniture.name.Equals("Stand(Clone)")){
+            furnitureInformation = furnitureInformation + "stand" + " ";
+        } else if(furniture.name.Equals("Statue(Clone)")){
+            furnitureInformation = furnitureInformation + "statue" + " ";
+        } else if(furniture.name.Equals("Stool(Clone)")){
+            furnitureInformation = furnitureInformation + "stool" + " ";
+        } else if(furniture.name.Equals("Stump(Clone)")){
+            furnitureInformation = furnitureInformation + "stump" + " ";
+        } else if(furniture.name.Equals("Table(Clone)")){
+            furnitureInformation = furnitureInformation + "table" + " ";
+        } else if(furniture.name.Equals("Tombstone(Clone)")){
+            furnitureInformation = furnitureInformation + "tombstone" + " ";
+        } else if(furniture.name.Equals("Tower(Clone)")){
+            furnitureInformation = furnitureInformation + "tower" + " ";
+        } else if(furniture.name.Equals("Tree(Clone)")){
+            furnitureInformation = furnitureInformation + "tree" + " ";
+        }
             furnitureInformation = furnitureInformation + (furniture.transform.rotation.eulerAngles.z/90) + ",";
         }
         furnitureInformation = furnitureInformation + menuScript.returnObjects();
@@ -195,12 +249,7 @@ public class GridManager : MonoBehaviour
             } 
         }
         for(int i = 0; i < splitGridValues.Length; i++){
-            Debug.Log(splitGridValues[i]);
             string[] splitValues = splitGridValues[i].Split(" ");
-            Debug.Log(splitValues[0]);
-            Debug.Log(splitValues[1]);
-            Debug.Log(splitValues[2]);
-            Debug.Log(splitValues[3]);
             if(!splitValues[0].Equals("null") && !splitValues[1].Equals("null")){
                 furnitureGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = splitValues[2];
                 rotationGrid[Int32.Parse(splitValues[0]), Int32.Parse(splitValues[1])] = Int32.Parse(splitValues[3]);
@@ -218,7 +267,43 @@ public class GridManager : MonoBehaviour
                     Instantiate(testBench, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
                 } else if(furnitureGrid[i,j].Equals("door")){
                     Instantiate(testDoor, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
-                } //Add the rest of the furniture here
+                } else if(furnitureGrid[i,j].Equals("bush")){
+            Instantiate(bush, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("doghouse")){
+            Instantiate(doghouse, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("fence")){
+            Instantiate(fence, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("fern")){
+            Instantiate(fern, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("flag")){
+            Instantiate(flag, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("fruitbox")){
+            Instantiate(fruitbox, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        }  else if(furnitureGrid[i,j].Equals("fruitbox")){
+            Instantiate(fruitbox, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("house")){
+            Instantiate(house, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("log")){
+            Instantiate(log, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        }  else if(furnitureGrid[i,j].Equals("rock")){
+            Instantiate(rock, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("sign")){
+            Instantiate(sign, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("stand")){
+            Instantiate(stand, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("stool")){
+            Instantiate(stool, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("stump")){
+            Instantiate(stump, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("table")){
+            Instantiate(table, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("tombstone")){
+            Instantiate(tombstone, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("tower")){
+            Instantiate(tower, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        } else if(furnitureGrid[i,j].Equals("tree")){
+            Instantiate(tree, new Vector3(i+0.5f, j+0.5f), Quaternion.Euler(0, 0, 90*rotationGrid[i,j]));
+        }
             } 
         }
         activity.CallStatic("furnitureSpawned", new object[] { "Furniture Spawned" });

@@ -921,7 +921,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 40
+  m_Spacing: 80
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -960,6 +960,28 @@ MonoBehaviour:
   UIFountain: {fileID: 8302802709756945955, guid: 8b7417bf09452454eb35e8ce97a721f9,
     type: 3}
   UIDoor: {fileID: 3965289728486363887, guid: b6e1e8bf035f3824592bbacf023f6d55, type: 3}
+  UIBush: {fileID: 5586795607915783807, guid: 28382fba7c7062e4ba7f66eba9cd5028, type: 3}
+  UIDogHouse: {fileID: 1006626871493758566, guid: f9453f4aec75f234fa8b30f2c9b832b1,
+    type: 3}
+  UIFence: {fileID: 4738863830262764454, guid: 0b06dae919f2503428580141b55ab0a2, type: 3}
+  UIFern: {fileID: 8732818439254818813, guid: 331086b68adca4e43b18dc985ed38902, type: 3}
+  UIFlag: {fileID: 2065451848934103774, guid: 0384fe14511330040840081337b48ed3, type: 3}
+  UIFruitBox: {fileID: 1937468493798245831, guid: 8c415ae1c37f9b04bafe248a241bd0d1,
+    type: 3}
+  UIHouse: {fileID: 1537558585320656621, guid: e1dca7d792739de49a6e564d0d302c5c, type: 3}
+  UILog: {fileID: 1660798248058589763, guid: 7bc463a7887529d4cb086f6a0a097d1f, type: 3}
+  UIRock: {fileID: 2997316547748421853, guid: 52bcfa309009ad3468498dad2e7a6a7b, type: 3}
+  UISign: {fileID: 564384668041372285, guid: 34c867db3f86fae4fbf116e185c2dac6, type: 3}
+  UIStand: {fileID: 5489341054363946431, guid: 2013bf0c8a162b1449c93232fe61089f, type: 3}
+  UIStatue: {fileID: 1167075592531163709, guid: 59f8b3bf3d356e64f979362c1ba2ccf8,
+    type: 3}
+  UIStool: {fileID: 5487407821287649694, guid: 79719eb4ebfdc444a98c9275cb60919c, type: 3}
+  UIStump: {fileID: 2579943993793613963, guid: ef9e94beebc1445479902742a673dc83, type: 3}
+  UITable: {fileID: 2786798095047987660, guid: 8adb8a714745c3043822018fc9342eef, type: 3}
+  UITombstone: {fileID: 8672874878777044756, guid: 14e329c73c34e7f41be338ea859a3b30,
+    type: 3}
+  UITower: {fileID: 4888547927851477627, guid: 9ad5a8a991aa00946abef7d2d3628bcb, type: 3}
+  UITree: {fileID: 850099538341843494, guid: 231644778b4b9654b87eced5788359f3, type: 3}
 --- !u!1 &859524413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1707,27 @@ MonoBehaviour:
     type: 3}
   testFountain: {fileID: 5382865152933451054, guid: 5de0ee74f8ced1d4ca40ea009c3b2582,
     type: 3}
+  bush: {fileID: 6476856512860134615, guid: a4bbc62981eb110449518257a2b4649a, type: 3}
+  doghouse: {fileID: 6289735960275724609, guid: 0ec7ad2d7fabc6440a5d75efcae59577,
+    type: 3}
+  fence: {fileID: 6992590030626276980, guid: 4108fb15d3a609f4ba18d6a95aa1e96e, type: 3}
+  fern: {fileID: 8748843743902586986, guid: 190c2d6d108cd524186377f457bdeca2, type: 3}
+  flag: {fileID: 6277133956276735820, guid: fd6a68f53943e95478c03e7ce4f922ed, type: 3}
+  fruitbox: {fileID: 6437084304137135273, guid: c3887007fe58e7c45b6f32f575c1018e,
+    type: 3}
+  house: {fileID: 1569384033366361361, guid: 5f4c6eec93cb31543af73cfa70b25acd, type: 3}
+  log: {fileID: 6859970350630361083, guid: 9d8bcb63ec484e54689058f8e952a290, type: 3}
+  rock: {fileID: 3798712910630169183, guid: 4bb4346b3063ce744ba2e7d2efffd642, type: 3}
+  sign: {fileID: 1785751741706348683, guid: c6ee6aabfe4481a46b3f598b901041a3, type: 3}
+  stand: {fileID: 4269715100347290042, guid: 25cea395d441304468763056ad7281dc, type: 3}
+  statue: {fileID: 8711238993236676416, guid: bfae795e036e7914bb270613bc9269c5, type: 3}
+  stool: {fileID: 8818661779295332427, guid: 6f5d4c5fc068a394e8758c50a7d56294, type: 3}
+  stump: {fileID: 7325500361395553816, guid: 81e35525f6b7b2a4086feb58431823bc, type: 3}
+  table: {fileID: 5672072370662057610, guid: 5f654ed2f7395724ea0d2ab87f00520f, type: 3}
+  tombstone: {fileID: 1480587655995032602, guid: 14591ee4b6f50c14bb33e6995d955255,
+    type: 3}
+  tower: {fileID: 996358751544084151, guid: 7255d75786740d845a880cb818473506, type: 3}
+  tree: {fileID: 4775291849228233593, guid: 38338bf4653461146a01db8827c75d42, type: 3}
   sprites:
   - {fileID: 5927350949019876849, guid: 7ef181ba9960ad14b976972914b22408, type: 3}
   - {fileID: -2671460228953875570, guid: 7ef181ba9960ad14b976972914b22408, type: 3}
