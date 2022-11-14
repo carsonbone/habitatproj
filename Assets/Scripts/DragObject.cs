@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DragObject : MonoBehaviour
 {
@@ -48,6 +49,9 @@ public class DragObject : MonoBehaviour
         JustSpawned = false;
         validCheck = true;
         touchingJoystick = false;
+        string CurName = SceneManager.GetActiveScene().name;
+        Debug.Log(CurName);
+        
     }
 
     // Update is called once per frame

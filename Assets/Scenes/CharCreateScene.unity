@@ -855,12 +855,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d7bf15ddb0f984b952cfe83de42887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPlace: 1
   handler: {fileID: 0}
   Container: {fileID: 0}
   testDelete: {fileID: 0}
   testRotate: {fileID: 0}
   grid: {fileID: 0}
+  smoke: {fileID: 0}
+  myHouse: 0
 --- !u!1 &697947711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,6 +1612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187789261}
   - component: {fileID: 1187789260}
+  - component: {fileID: 1187789262}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -1685,6 +1687,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1187789262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187789259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae37e3ebc21c7b468a18cc56c615cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DragScript: {fileID: 599823415}
 --- !u!1 &1210911696
 GameObject:
   m_ObjectHideFlags: 0

@@ -125,6 +125,7 @@ public class GridManager : MonoBehaviour
         {
             Debug.Log("not my house");
             DragScript.myHouse = 0;
+            //temp maybe
         }
         else
         {
