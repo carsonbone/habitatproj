@@ -20,6 +20,8 @@ public class DragObject : MonoBehaviour
     public GameObject testRotate;
     public Grid grid; //the game grid layout
 
+    public GameObject smoke;
+
 
 
     //stuff for spawning objects
@@ -198,8 +200,14 @@ public class DragObject : MonoBehaviour
                             obj.GetComponent<SpriteRenderer>().material.color = new Color(0, 150, 150); //just a temp color
                             //will evantually change this to a specific material, something that highlights the object and makes it
                             //slightly transparent instead of just changing the whole color
+                            Component[] colliders;
 
-                            obj.GetComponent<BoxCollider2D>().isTrigger = true; //turn off the collider while we are moving the object
+                            colliders = obj.GetComponents(typeof(BoxCollider2D));
+
+                            foreach (BoxCollider2D collider in colliders)
+                            {
+                                collider.isTrigger = true;
+                            } //turn off the collider while we are moving the object
                             //just kidding, actually now we just set this as a trigger, meaning it wont physically collide
                             //but it still has the box to do checks on
 
@@ -363,9 +371,18 @@ public class DragObject : MonoBehaviour
                         rotateButton.transform.localScale = trueScale;
                         rotateButton.name = "RotateButton";
 
+                        Instantiate(smoke, obj.transform.position, Quaternion.identity);
+
                         obj.GetComponent<SpriteRenderer>().material.color = objcolor; //return the object to its normal color
 
-                        obj.GetComponent<BoxCollider2D>().isTrigger = false; //turn back on the box collider, as the object is placed now
+                        Component[] colliders;
+
+                        colliders = obj.GetComponents(typeof(BoxCollider2D));
+
+                        foreach (BoxCollider2D collider in colliders)
+                        {
+                            collider.isTrigger = false;
+                        } //turn back on the box collider, as the object is placed now
                         //just kidding again, now we unset it as a trigger, so that it has actual collision
 
                         obj = null; //clear the obj variable, so it can be set to a new object on the next touch

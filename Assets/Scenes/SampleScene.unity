@@ -766,6 +766,7 @@ MonoBehaviour:
   testRotate: {fileID: 3316681137364651080, guid: d01fe79c1ff014e4d8d025abe1341b7d,
     type: 3}
   grid: {fileID: 2058734579}
+  smoke: {fileID: 4569503590254090906, guid: f32f888ae8a7fc544ab8da5f6322d4c2, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.799988, y: 0.4911499}
+  m_AnchoredPosition: {x: -47.799988, y: 0.49108887}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1299112549
@@ -1863,8 +1864,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1185751945
-  m_SortingLayer: 2
+  m_SortingLayerID: -1382714015
+  m_SortingLayer: 1
   m_SortingOrder: 8
   m_Sprite: {fileID: 45716521, guid: d2769270bf0269c4093821ce1c333624, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
