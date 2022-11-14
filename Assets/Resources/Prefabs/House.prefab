@@ -125,7 +125,7 @@ BoxCollider2D:
   m_Offset: {x: 0.010643005, y: -0.64923763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49137267, y: 0.36678895}
     oldSize: {x: 5.0625, y: 5}
     newSize: {x: 5.0625, y: 5}
     adaptiveTilingThreshold: 0.5
@@ -158,7 +158,7 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569384033366361361}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_SortAtRoot: 0

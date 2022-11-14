@@ -31,28 +31,32 @@ public class DragObject : MonoBehaviour
     private UIObject uiscript;
     private AddToMenu menuScript;
 
-    public static bool myHouse = true;
+    public int myHouse;
 
     private bool touchingJoystick;
 
     private bool validCheck;
     // Start is called before the first frame update
    
+    void Awake()
+    {
+        //myHouse = true;
+    }
     void Start()
     {
         menuScript = Container.GetComponent<AddToMenu>();
         JustSpawned = false;
         validCheck = true;
-        myHouse = true;
         touchingJoystick = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         touchingJoystick = false;
 
-        if(Input.touchCount > 0 ) //where 0 means no fingers on the phone, 1 means one finger etc
+        if(Input.touchCount > 0 && myHouse == 1) //where 0 means no fingers on the phone, 1 means one finger etc
         {
             Touch touch = Input.GetTouch(0); // the touch input being made, specifically the most recent one
 

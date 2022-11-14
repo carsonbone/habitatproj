@@ -44,15 +44,15 @@ public class GridManager : MonoBehaviour
     private int columns = 50;
     private int rows = 50;
     public AvatarScript avaScript;
-    
 
-    public bool myHouse;
+    public DragObject DragScript;
+    
+    
 
     private Tile[] tileArray;
     // Start is called before the first frame update
     void Start()
     {
-        
         menuScript = Container.GetComponent<AddToMenu>();
         //This block is for when it's connected to the android app
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
@@ -62,6 +62,7 @@ public class GridManager : MonoBehaviour
 #if UNITY_ANDROID
             activity.CallStatic("unityReady", new object[] {"Unity Ready"});
 #endif
+
 
         //This block is specifically for testing without android input, activate if not connected to the app
         // grid = new int[columns, rows];
@@ -115,16 +116,20 @@ public class GridManager : MonoBehaviour
         //     } 
         // }
         // menuScript.addToMenu("fountain");
+
+        
     }
     public void IsMyHouse(string input)
     {
         if(input.Equals("false"))
         {
-            DragObject.myHouse = false;
+            Debug.Log("not my house");
+            DragScript.myHouse = 0;
         }
         else
         {
-            DragObject.myHouse = true;
+            Debug.Log("is my house");
+            DragScript.myHouse = 1;
         }
     }
     public void SpawnAvatar(string input)
