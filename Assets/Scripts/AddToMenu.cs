@@ -26,6 +26,7 @@ public class AddToMenu : MonoBehaviour
     public GameObject UITombstone;
     public GameObject UITower;
     public GameObject UITree;
+    private UIObject objectScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,48 +42,202 @@ public class AddToMenu : MonoBehaviour
     public void addToMenu(string objectName){
         GameObject temp = null;
         if(objectName.Equals("skull")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("SkullMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UISkull, this.transform);
         } else if(objectName.Equals("bench")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("BenchMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIBench, this.transform);
         } else if(objectName.Equals("fountain")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("FountainMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIFountain, this.transform);
         } else if(objectName.Equals("door")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("DoorMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIDoor, this.transform);
         } else if(objectName.Equals("bush")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("BushMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIBush, this.transform);
         } else if(objectName.Equals("doghouse")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("DogHouseMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIDogHouse, this.transform);
         } else if(objectName.Equals("fence")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("FenceMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIFence, this.transform);
         } else if(objectName.Equals("fern")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("FernMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIFern, this.transform);
         } else if(objectName.Equals("flag")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("FlagMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIFlag, this.transform);
         } else if(objectName.Equals("fruitbox")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("FruitBoxMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIFruitBox, this.transform);
         }  else if(objectName.Equals("house")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("HouseMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIHouse, this.transform);
         } else if(objectName.Equals("log")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("LogMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UILog, this.transform);
         } else if(objectName.Equals("rock")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("RockMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIRock, this.transform);
         }  else if(objectName.Equals("sign")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("SignMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UISign, this.transform);
         } else if(objectName.Equals("stand")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("StandMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIStand, this.transform);
         } else if(objectName.Equals("statue")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("StatueMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIStatue, this.transform);
         } else if(objectName.Equals("stool")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("StoolMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIStool, this.transform);
         } else if(objectName.Equals("stump")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("StumpMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UIStump, this.transform);
         } else if(objectName.Equals("table")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("TableMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UITable, this.transform);
         } else if(objectName.Equals("tombstone")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("TombstoneMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UITombstone, this.transform);
         } else if(objectName.Equals("tower")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("TowerMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UITower, this.transform);
         } else if(objectName.Equals("tree")){
+            foreach(Transform child in transform){
+                if(child.name.Equals("TreeMenuObject(Clone)")){
+                    objectScript = child.GetComponent<UIObject>();
+                    objectScript.IncreaseAmount();
+                    return;
+                }
+            }
             Instantiate(UITree, this.transform);
         }
     }

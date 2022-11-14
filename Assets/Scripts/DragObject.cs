@@ -154,7 +154,7 @@ public class DragObject : MonoBehaviour
                         spawnedObj = uiscript.GiveObj();
                         obj = spawnedObj;
                         tempObj.GetComponent<Image>().color = Color.white;
-                        Destroy(tempObj);
+                        uiscript.DecreaseAmount();
                         tempObj = null;
                         uiscript = null;
                     }
