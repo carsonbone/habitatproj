@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1946538104864394414}
   - component: {fileID: 5807206631153097939}
   - component: {fileID: -7359091792826287407}
+  - component: {fileID: 7275637364690413765}
   m_Layer: 0
   m_Name: testdoor
   m_TagString: PlaceableObject
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4372251}
+  m_Offset: {x: 0, y: -0.5023762}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1255498}
+  m_Size: {x: 1, y: 0.99524766}
   m_EdgeRadius: 0
 --- !u!50 &5807206631153097939
 Rigidbody2D:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &7275637364690413765
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539013855948320784}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 620801634522915334}
   - component: {fileID: 1617995771350662570}
   - component: {fileID: 4303156936921648973}
+  - component: {fileID: 9141930214790411627}
   m_Layer: 0
   m_Name: Tombstone
   m_TagString: PlaceableObject
@@ -121,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0019931793}
+  m_Offset: {x: 0, y: -0.176723}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1294528, y: 1.0965557}
+  m_Size: {x: 1.1294528, y: 0.73912334}
   m_EdgeRadius: 0
 --- !u!114 &4303156936921648973
 MonoBehaviour:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &9141930214790411627
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480587655995032602}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 809341425004054389}
   - component: {fileID: 1156945528263637218}
   - component: {fileID: 6028092810217552382}
+  - component: {fileID: 4329610521175440915}
   m_Layer: 0
   m_Name: Flag
   m_TagString: PlaceableObject
@@ -122,10 +123,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002270937, y: -0.17607307}
+  m_Offset: {x: -0.11153436, y: -0.58075523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5289163, y: 0.5262051}
     oldSize: {x: 1.8125, y: 2}
     newSize: {x: 1.8125, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -133,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.455811, y: 1.6478539}
+  m_Size: {x: 1.5124669, y: 0.87086487}
   m_EdgeRadius: 0
 --- !u!114 &1156945528263637218
 MonoBehaviour:
@@ -170,3 +171,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &4329610521175440915
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277133956276735820}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

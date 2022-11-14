@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5239298007158905154}
   - component: {fileID: 7989263503538583231}
   - component: {fileID: 4392724688055143745}
+  - component: {fileID: 9050192962388430318}
   m_Layer: 0
   m_Name: Fence
   m_TagString: PlaceableObject
@@ -121,10 +122,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.054189682, y: -0.08549976}
+  m_Offset: {x: 0.054189682, y: -0.113398075}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49856523, y: 0.36100352}
     oldSize: {x: 1.5625, y: 1}
     newSize: {x: 1.5625, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4541206, y: 0.8290005}
+  m_Size: {x: 1.4541206, y: 0.30450916}
   m_EdgeRadius: 0
 --- !u!114 &4392724688055143745
 MonoBehaviour:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &9050192962388430318
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992590030626276980}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

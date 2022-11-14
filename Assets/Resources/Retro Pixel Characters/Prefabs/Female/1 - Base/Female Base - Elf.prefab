@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5415347013486378661}
   - component: {fileID: 5362265650316919783}
   - component: {fileID: 5333262224312007987}
+  - component: {fileID: 6988132455154811594}
   m_Layer: 0
   m_Name: Female Base - Elf
   m_TagString: Untagged
@@ -185,3 +186,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!210 &6988132455154811594
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5382261713348775935}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4678100709170181537}
   - component: {fileID: 191171368991153934}
   - component: {fileID: 8942949520248665451}
+  - component: {fileID: -105057455394107715}
   m_Layer: 0
   m_Name: House
   m_TagString: PlaceableObject
@@ -121,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010643005, y: -0.25543785}
+  m_Offset: {x: 0.010643005, y: -0.64923763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6154823, y: 4.4891243}
+  m_Size: {x: 4.6154823, y: 2.8500614}
   m_EdgeRadius: 0
 --- !u!114 &8942949520248665451
 MonoBehaviour:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &-105057455394107715
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569384033366361361}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

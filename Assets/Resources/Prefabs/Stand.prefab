@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1206753426401044897}
   - component: {fileID: 8405599997078791862}
   - component: {fileID: 2044885018548965680}
+  - component: {fileID: 7162637867454046900}
   m_Layer: 0
   m_Name: Stand
   m_TagString: PlaceableObject
@@ -122,10 +123,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.8227596}
+  m_Offset: {x: 0, y: -0.5821905}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4906097, y: 0.30564287}
     oldSize: {x: 5, y: 5.375}
     newSize: {x: 5, y: 5.375}
     adaptiveTilingThreshold: 0.5
@@ -133,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 1.7294807}
+  m_Size: {x: 5, y: 1.5522575}
   m_EdgeRadius: 0
 --- !u!114 &8405599997078791862
 MonoBehaviour:
@@ -163,10 +164,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9655066, y: -0.88941956}
+  m_Offset: {x: 1.8252039, y: 0.100082874}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4906097, y: 0.30564287}
     oldSize: {x: 5, y: 5.375}
     newSize: {x: 5, y: 5.375}
     adaptiveTilingThreshold: 0.5
@@ -174,5 +175,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0689869, y: 3.596161}
+  m_Size: {x: 1.3495922, y: 3.005416}
   m_EdgeRadius: 0
+--- !u!210 &7162637867454046900
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269715100347290042}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

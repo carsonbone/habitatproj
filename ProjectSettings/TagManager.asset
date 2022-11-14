@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PlaceableObject
   - Buttons
+  - ObjectUI
+  - UIButton
+  - SceneDone
+  - UIArrow
   layers:
   - Default
   - TransparentFX
@@ -51,6 +55,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 335748041
+    locked: 0
+  - name: Agent
+    uniqueID: 721261973
     locked: 0
   - name: Buttons
     uniqueID: 1043001059

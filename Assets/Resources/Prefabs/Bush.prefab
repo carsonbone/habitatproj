@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4711772566374473671}
   - component: {fileID: 7359863629716493552}
   - component: {fileID: 4723917163827369520}
+  - component: {fileID: -6909373269914331295}
   m_Layer: 0
   m_Name: Bush
   m_TagString: PlaceableObject
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &-6909373269914331295
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476856512860134615}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

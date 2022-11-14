@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -9057442871136155621}
   - component: {fileID: 7483658558569928020}
   - component: {fileID: 7321311335396490632}
+  - component: {fileID: -2722456421327910499}
   m_Layer: 0
   m_Name: testBench
   m_TagString: PlaceableObject
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15639806}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9051662, y: 2.9289362}
+  m_Size: {x: 0.9051662, y: 2.61614}
   m_EdgeRadius: 0
 --- !u!50 &7483658558569928020
 Rigidbody2D:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &-2722456421327910499
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814448469293321587}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

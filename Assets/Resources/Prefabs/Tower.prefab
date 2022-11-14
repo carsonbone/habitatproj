@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 331067739958361394}
   - component: {fileID: 6208186091237301266}
   - component: {fileID: 5685715224246887836}
+  - component: {fileID: -816943446877122120}
   m_Layer: 0
   m_Name: Tower
   m_TagString: PlaceableObject
@@ -121,10 +122,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.0931501}
+  m_Offset: {x: 0, y: -0.9582367}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5107796, y: 0.27943745}
     oldSize: {x: 2.9375, y: 7.25}
     newSize: {x: 2.9375, y: 7.25}
     adaptiveTilingThreshold: 0.5
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9375, y: 2.5909977}
+  m_Size: {x: 2.9375, y: 2.380394}
   m_EdgeRadius: 0
 --- !u!114 &5685715224246887836
 MonoBehaviour:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &-816943446877122120
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996358751544084151}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

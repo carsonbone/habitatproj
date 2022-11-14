@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6357118143534874821}
   - component: {fileID: 2312242842328487139}
   - component: {fileID: 6011992033368477734}
+  - component: {fileID: -6337773103660718786}
   m_Layer: 0
   m_Name: Fern
   m_TagString: PlaceableObject
@@ -121,10 +122,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.56729054}
+  m_Offset: {x: 0, y: -0.32896137}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.51747024, y: 0.3515023}
     oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8654189}
+  m_Size: {x: 1, y: 0.8452778}
   m_EdgeRadius: 0
 --- !u!114 &6011992033368477734
 MonoBehaviour:
@@ -149,3 +150,15 @@ MonoBehaviour:
   length: 0
   width: 0
   isValid: 0
+--- !u!210 &-6337773103660718786
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748843743902586986}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

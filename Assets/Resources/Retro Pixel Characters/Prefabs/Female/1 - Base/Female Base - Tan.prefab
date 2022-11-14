@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5546375719472606929}
   - component: {fileID: 5599410353671541651}
   - component: {fileID: 5610376286858358087}
+  - component: {fileID: 6217158900027475894}
   m_Layer: 0
   m_Name: Female Base - Tan
   m_TagString: Untagged
@@ -185,3 +186,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!210 &6217158900027475894
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579432986559979403}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
