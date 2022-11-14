@@ -57,8 +57,8 @@ public class GridManager : MonoBehaviour
         //This block is for when it's connected to the android app
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-        InvokeRepeating("SavePositions", 5.0f, 5.0f);
-        InvokeRepeating("SaveAvatar", 5.0f, 5.0f);
+        InvokeRepeating("SavePositions", 1.0f, 1.0f);
+        InvokeRepeating("SaveAvatar", 1.0f, 1.0f);
 #if UNITY_ANDROID
             activity.CallStatic("unityReady", new object[] {"Unity Ready"});
 #endif
