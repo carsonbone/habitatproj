@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4442344224835103452}
   - component: {fileID: 69582124023696163}
   - component: {fileID: 2257181153414753731}
+  - component: {fileID: 969067637982886257}
   m_Layer: 0
   m_Name: TestFountain
   m_TagString: PlaceableObject
@@ -170,3 +171,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!210 &969067637982886257
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5382865152933451054}
+  m_Enabled: 1
+  m_SortingLayerID: 721261973
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

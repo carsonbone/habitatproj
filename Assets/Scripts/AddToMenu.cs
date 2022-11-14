@@ -39,6 +39,7 @@ public class AddToMenu : MonoBehaviour
     }
 
     public void addToMenu(string objectName){
+        GameObject temp = null;
         if(objectName.Equals("skull")){
             Instantiate(UISkull, this.transform);
         } else if(objectName.Equals("bench")){

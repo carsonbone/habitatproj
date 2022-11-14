@@ -213,6 +213,7 @@ public class DragObject : MonoBehaviour
 
                         }
                         if(objcheck.name == "DeleteButton"){
+
                             if (deleteButton.transform.parent.name.Equals("testskull(Clone)"))
                             {
                                 menuScript.addToMenu("skull");
