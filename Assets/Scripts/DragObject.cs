@@ -205,15 +205,99 @@ public class DragObject : MonoBehaviour
 
                         }
                         if(objcheck.name == "DeleteButton"){
-                            if(deleteButton.transform.parent.name.Equals("testskull(Clone)")){
+                            if (deleteButton.transform.parent.name.Equals("testskull(Clone)"))
+                            {
                                 menuScript.addToMenu("skull");
-                            } else if(deleteButton.transform.parent.name.Equals("TestFountain(Clone)")){
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("TestFountain(Clone)"))
+                            {
                                 menuScript.addToMenu("fountain");
-                            } else if(deleteButton.transform.parent.name.Equals("testdoor(Clone)")){
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("testdoor(Clone)"))
+                            {
                                 menuScript.addToMenu("door");
-                            } else if(deleteButton.transform.parent.name.Equals("testBench(Clone)")){
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("testBench(Clone)"))
+                            {
                                 menuScript.addToMenu("bench");
                             }
+                            else if (deleteButton.transform.parent.name.Equals("Bush(Clone)"))
+                            {
+                                menuScript.addToMenu("bush");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("DogHouse(Clone)"))
+                            {
+                                menuScript.addToMenu("doghouse");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Fence(Clone)"))
+                            {
+                                menuScript.addToMenu("fence");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Fern(Clone)"))
+                            {
+                                menuScript.addToMenu("fern");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Flag(Clone)"))
+                            {
+                                menuScript.addToMenu("flag");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("FruitBox(Clone)"))
+                            {
+                                menuScript.addToMenu("fruitbox");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("House(Clone)"))
+                            {
+                                menuScript.addToMenu("house");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Log(Clone)"))
+                            {
+                                menuScript.addToMenu("log");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Rock(Clone)"))
+                            {
+                                menuScript.addToMenu("rock");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Sign(Clone)"))
+                            {
+                                menuScript.addToMenu("sign");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Stand(Clone)"))
+                            {
+                                menuScript.addToMenu("stand");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Statue(Clone)"))
+                            {
+                                menuScript.addToMenu("statue");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Stool(Clone)"))
+                            {
+                                menuScript.addToMenu("stool");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Stump(Clone)"))
+                            {
+                                menuScript.addToMenu("stump");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Table(Clone)"))
+                            {
+                                menuScript.addToMenu("table");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Tombstone(Clone)"))
+                            {
+                                menuScript.addToMenu("tombstone");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Tower(Clone)"))
+                            {
+                                menuScript.addToMenu("tower");
+                            }
+                            else if (deleteButton.transform.parent.name.Equals("Tree(Clone)"))
+                            {
+                                menuScript.addToMenu("tree");
+                            }
+
+
+
+
+
                             Destroy(deleteButton.transform.parent.gameObject);
                         }
                         if(objcheck.name == "RotateButton"){
