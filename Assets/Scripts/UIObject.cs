@@ -15,6 +15,17 @@ public class UIObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+
+    public void initializeObject(){
         objectNumber = 1;
         var objectCount = new GameObject();
         objectCount.transform.parent = this.transform;
@@ -28,13 +39,6 @@ public class UIObject : MonoBehaviour
         textTransform.sizeDelta = new Vector2(100, 50);
         textTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     public int returnAmount(){
         return objectNumber;

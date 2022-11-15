@@ -49,9 +49,7 @@ public class DragObject : MonoBehaviour
         JustSpawned = false;
         validCheck = true;
         touchingJoystick = false;
-        string CurName = SceneManager.GetActiveScene().name;
-        Debug.Log(CurName);
-        
+        string CurName = SceneManager.GetActiveScene().name;      
     }
 
     // Update is called once per frame
@@ -59,7 +57,6 @@ public class DragObject : MonoBehaviour
     {
 
         touchingJoystick = false;
-        Debug.Log(myHouse);
         if(Input.touchCount > 0 && myHouse == 1) //where 0 means no fingers on the phone, 1 means one finger etc
         {
             Touch touch = Input.GetTouch(0); // the touch input being made, specifically the most recent one
