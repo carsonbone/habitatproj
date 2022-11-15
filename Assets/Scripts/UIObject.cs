@@ -10,6 +10,7 @@ public class UIObject : MonoBehaviour
     public TMP_Text objectAmount;
     public TMP_FontAsset orange;
     public GameObject objPrefab;
+    private RectTransform textTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,12 @@ public class UIObject : MonoBehaviour
         objectAmount = objectCount.AddComponent<TextMeshProUGUI>();
         objectAmount.text = "x" + objectNumber;
         objectAmount.font= orange;
+        textTransform = objectAmount.GetComponent<RectTransform>();
+        textTransform.anchorMax = new Vector2(1.0f, 0.0f);
+        textTransform.anchorMin = new Vector2(1.0f, 0.0f);
+        textTransform.anchoredPosition = new Vector3(25.0f, 0.0f, 0.0f);
+        textTransform.sizeDelta = new Vector2(100, 50);
+        textTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
 
     // Update is called once per frame
@@ -33,12 +40,13 @@ public class UIObject : MonoBehaviour
         objectAmount.text = "x" + objectNumber;
     }
 
-    public void DecreaseAmount(){
+    public bool DecreaseAmount(){
         if(objectNumber == 1){
-            Destroy(this.transform);
+            return true;
         } else {
             objectNumber--;
             objectAmount.text = "x" + objectNumber;
+            return false;
         }
     }
 

@@ -41,7 +41,7 @@ public class DragObject : MonoBehaviour
    
     void Awake()
     {
-        //myHouse = true;
+        //myHouse = 1;
     }
     void Start()
     {
@@ -59,7 +59,7 @@ public class DragObject : MonoBehaviour
     {
 
         touchingJoystick = false;
-
+        Debug.Log(myHouse);
         if(Input.touchCount > 0 && myHouse == 1) //where 0 means no fingers on the phone, 1 means one finger etc
         {
             Touch touch = Input.GetTouch(0); // the touch input being made, specifically the most recent one
@@ -154,7 +154,10 @@ public class DragObject : MonoBehaviour
                         spawnedObj = uiscript.GiveObj();
                         obj = spawnedObj;
                         tempObj.GetComponent<Image>().color = Color.white;
-                        uiscript.DecreaseAmount();
+                        bool deleteObject = uiscript.DecreaseAmount();
+                        if(deleteObject){
+                            Destroy(tempObj);
+                        }
                         tempObj = null;
                         uiscript = null;
                     }

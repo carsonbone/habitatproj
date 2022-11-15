@@ -1746,6 +1746,7 @@ MonoBehaviour:
   - {fileID: 4057243254486268364, guid: 7ef181ba9960ad14b976972914b22408, type: 3}
   - {fileID: 8915356073363846004, guid: 7ef181ba9960ad14b976972914b22408, type: 3}
   avaScript: {fileID: 1744014735}
+  ObjectHandler: {fileID: 418364714}
   DragScript: {fileID: 418364716}
 --- !u!4 &2044346368
 Transform:
