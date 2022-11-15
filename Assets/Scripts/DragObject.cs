@@ -41,7 +41,7 @@ public class DragObject : MonoBehaviour
    
     void Awake()
     {
-        myHouse = 1;
+        //myHouse = 1;
     }
     void Start()
     {
