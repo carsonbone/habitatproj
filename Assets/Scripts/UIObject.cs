@@ -35,6 +35,11 @@ public class UIObject : MonoBehaviour
         
     }
 
+
+    public int returnAmount(){
+        return objectNumber;
+    }
+
     public void IncreaseAmount(){
         objectNumber++;
         objectAmount.text = "x" + objectNumber;

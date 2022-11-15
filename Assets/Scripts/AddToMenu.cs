@@ -245,7 +245,9 @@ public class AddToMenu : MonoBehaviour
     public string returnObjects(){
         string objectList = "";
         foreach(Transform child in transform){
-            if(child.name.Equals("SkullMenuObject(Clone)")){
+            objectScript = child.GetComponent<UIObject>();
+            for(int i = 0; i < objectScript.returnAmount(); i++){
+                if(child.name.Equals("SkullMenuObject(Clone)")){
                 objectList = objectList + "null null skull null,";
             } else if(child.name.Equals("BenchMenuObject(Clone)")){
                 objectList = objectList + "null null bench null,";
@@ -290,6 +292,8 @@ public class AddToMenu : MonoBehaviour
         } else if(child.name.Equals("TreeMenuObject(Clone)")){
             objectList = objectList + "null null tree null,";
         }
+            }
+            
         }
         return objectList;
     }
