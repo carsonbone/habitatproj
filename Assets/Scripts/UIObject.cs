@@ -35,9 +35,10 @@ public class UIObject : MonoBehaviour
         textTransform = objectAmount.GetComponent<RectTransform>();
         textTransform.anchorMax = new Vector2(1.0f, 0.0f);
         textTransform.anchorMin = new Vector2(1.0f, 0.0f);
-        textTransform.anchoredPosition = new Vector3(25.0f, 0.0f, 0.0f);
+        textTransform.anchoredPosition = new Vector3(15.0f, 0.0f, 0.0f);
         textTransform.sizeDelta = new Vector2(100, 50);
-        textTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        
+        textTransform.localScale = new Vector3((1.0f/this.transform.localScale.x) + 0.1f, (1.0f/this.transform.localScale.y) + 0.1f, 1.0f/this.transform.localScale.z);
     }
 
     public int returnAmount(){
